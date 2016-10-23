@@ -48,7 +48,14 @@
         </tr>
 
     </table>
+    <script>
+        var htmlImport = document.querySelector('link[rel="import"]');
+        var htmlDoc = htmlImport.import;
+        var htmlMessage = htmlDoc.querySelector('#nav');
+        document.body.appendChild(htmlMessage.cloneNode(true));
+        console.log("It runs!!!");
 
+    </script>
 </body>
 
 </html>

@@ -9,7 +9,7 @@ activity_earn_page.html
 redeem_page.html  
 
 #components:  
-persistant_tab.html  
+persistent_tab.html  
 redeem_popup.html  
 about_project_popup.html  
 

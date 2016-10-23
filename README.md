@@ -2,7 +2,7 @@
 cse170 project (citizen science)
 
 main pages:
-login_page.html,
+login_page.html,\n
 home_page.html,
 select_earn_page.html,
 activity_earn_page.html,

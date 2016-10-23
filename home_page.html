@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <style>
+            #project-title{
+                text-decoration: underline;
+            }
+            
+            ul.projects {
+                list-style: none;
+                font-size: 0px;
+                margin-left: -2.5%; /* should match li left margin */
+            }
+            
+            ul.projects li {
+                display: inline-block;
+                padding: 10px;
+                background: #fff;
+                font-size: 16px;
+                font-size: 1rem;
+                vertical-align: top;
+            }
+            ul.projects li img {
+                max-width: 100%;
+                height: auto;
+                margin: 0 0 10px;
+            }
+            
+            /* class for 3 columns */
+            ul.projects.columns-3 li {
+                width: 30.83%; /* this value + 2.5 should = 33% */
+            }
+            
+            @media (max-width: 480px) {
+                ul.grid-nav li {
+                    display: block;
+                    margin: 0 0 5px;
+                }
+                ul.grid-nav li a {
+                    display: block;
+                }
+                ul.projects {
+                    margin-left: 0;
+                }
+                ul.projects li {
+                    width: 100% !important; /* over-ride all li styles */
+                    margin: 0 0 20px;
+                }
+            }
+            
+        </style>
+    </head>
+    <body>
+        <p id="project-title">
+            Available Projects
+        </p>
+        <div id="projects-wrapper">
+            <ul class="projects columns-3">
+                <li>
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg" alt="">
+                </li>
+                <li>
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg06.jpg" alt="">
+                </li>
+                <li>
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg08.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

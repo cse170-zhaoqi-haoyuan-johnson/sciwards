@@ -1,6 +1,15 @@
 <html>
     <head>
+        <title>
+            SciWards
+        </title>
+        <link rel="import" href="persistent_tab.html">
+        
         <style>
+            .container {
+                padding-top: 75px;
+            }
+            
             #project-title{
                 text-decoration: underline;
             }
@@ -47,24 +56,60 @@
                 }
             }
             
+            .goals-wrapper {
+                border-style: double;
+                border-width: 3px;
+            }
+            
+            #item-pic {
+                margin: 20px;
+                border-style: solid;
+                border-width: thin;
+                width: 50px;
+                height: 50px;
+            }
+            
+            #goal-progress {
+                margin-left: 20px;
+                margin-bottom: 20px;
+            }
+            
         </style>
     </head>
     <body>
-        <p id="project-title">
-            Available Projects
-        </p>
-        <div id="projects-wrapper">
-            <ul class="projects columns-3">
-                <li>
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg06.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg08.jpg" alt="">
-                </li>
-            </ul>
+        <div class="container">
+            <p id="project-title">
+                Available Projects
+            </p>
+            <div id="projects-wrapper">
+                <ul class="projects columns-3">
+                    <li>
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg06.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg08.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="goals-wrapper">
+                <p>
+                    Goal Progress
+                </p>
+                <div id="item-pic">
+                </div>
+                <progress id="goal-progress" value="40" max="100">
+                </progress>
+            </div>
         </div>
+        <script>
+            var htmlImport = document.querySelector('link[rel="import"]');
+            var htmlDoc = htmlImport.import;
+            var htmlMessage = htmlDoc.querySelector('#nav');
+            document.body.appendChild(htmlMessage.cloneNode(true));
+            console.log("It runs!!!");
+        </script>
     </body>
 </html>

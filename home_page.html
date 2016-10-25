@@ -1,8 +1,11 @@
 <html>
     <head>
+        <!-- import JQuery -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <title>
             SciWards
         </title>
+        <div id="navbar"></div>
         <link rel="import" href="persistent_tab.html">
         
         <style>
@@ -104,12 +107,11 @@
                 </progress>
             </div>
         </div>
-        <script>
-            var htmlImport = document.querySelector('link[rel="import"]');
-            var htmlDoc = htmlImport.import;
-            var htmlMessage = htmlDoc.querySelector('#nav');
-            document.body.appendChild(htmlMessage.cloneNode(true));
-            console.log("It runs!!!");
-        </script>
+        
+
     </body>
+            <!-- Load Navbar -->
+        <script>
+            $("#navbar").load("persistent_tab.html");
+        </script>
 </html>

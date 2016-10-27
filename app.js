@@ -10,6 +10,8 @@ var handlebars = require('express-handlebars')
 
 var index = require('./routes/index');
 var earn = require('./routes/earn');
+var home = require('./routes/home');
+var redeem = require('./routes/redeem');
 // Example route
 // var user = require('./routes/user');
 
@@ -42,6 +44,8 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/earn/:projectName', earn.view);
 app.get('/nav',earn.nav);
+app.get('/home',home.view);
+app.get('/redeem',redeem.view);
 // Example route
 // app.get('/users', user.list);
 

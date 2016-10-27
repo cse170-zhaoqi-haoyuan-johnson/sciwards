@@ -42,6 +42,7 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
+app.get('/earn', earn.viewEmpty);
 app.get('/earn/:projectName', earn.view);
 app.get('/nav',earn.nav);
 app.get('/home',home.view);

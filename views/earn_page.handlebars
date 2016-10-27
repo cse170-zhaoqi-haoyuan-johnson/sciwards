@@ -21,6 +21,7 @@
 <div>
     <iframe id="projectFrame" name={{projectName}} width=100%></iframe>   
 </div>
+<h1 id="selectProjectPrompt" align="center" visible="false">Please Select a Project!</h1>
  
     
 </div>
@@ -57,6 +58,14 @@ function openProject(projectName)
         else if (projectName == "nightjar")
         {
             $("#projectFrame").attr("src","http://nightjar.exeter.ac.uk/where-is-that-nightjar/");
+        }
+        else 
+        {
+            //$("#projectFrame").attr("height", "0");
+            //$("#projectFrame").attr("width", "0");
+            $("#projectFrame").hide();
+            $("#selectProjectPrompt").attr("visible", "true");
+            console.log("empty");
         }
         
         

@@ -1,4 +1,3 @@
-
 /*
  * GET home page.
  */
@@ -8,6 +7,12 @@ exports.view = function(req, res){
   console.log("Project is " + projectName);
   res.render('earn_page', {
   	'projectName': projectName
+  });
+};
+exports.viewEmpty = function(req, res){
+  console.log("Project is emtpy");
+  res.render('earn_page', {
+  	'projectName': ''
   });
 };
 exports.nav = function(req,res){

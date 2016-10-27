@@ -6,10 +6,10 @@
 </head>
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="javascript:void(0)" onclick="openProject('EyeWire')">EyeWire</a>
-  <a href="javascript:void(0)" onclick="openProject('eterna')">eterna</a>
-  <a href="javascript:void(0)" onclick="openProject('PHYLO')">PHYLO</a>
-  <a href="javascript:void(0)" onclick="openProject('nightjar')">nightjar</a>
+  <a href="javascript:void(0)" onclick="openProjectURL('EyeWire')">EyeWire</a>
+  <a href="javascript:void(0)" onclick="openProjectURL('eterna')">eterna</a>
+  <a href="javascript:void(0)" onclick="openProjectURL('PHYLO')">PHYLO</a>
+  <a href="javascript:void(0)" onclick="openProjectURL('nightjar')">nightjar</a>
 </div>
 
 <br>
@@ -62,6 +62,10 @@ function openProject(projectName)
         
         closeNav();
     }
+function openProjectURL(projectName)
+{
+    window.location.href ='/earn/'+projectName;
+}
 </script>
     <script>
         window.onscroll = function () {

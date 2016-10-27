@@ -1,7 +1,7 @@
 <html>
 <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="../Public/CSS/earn_page.css">
+<link rel="stylesheet" type="text/css" href="/CSS/earn_page.css">
         <div id="navbar"></div>
 </head>
 <div id="mySidenav" class="sidenav">
@@ -26,15 +26,7 @@
 </div>
     </body>
          <!-- Load Navbar -->
-    <script>
-        window.onscroll = function () {
-            window.scrollTo(0,0);
-        }
-        $("#navbar").load("persistent_tab.html");
-        $("#projectFrame").attr("height", $(window).innerHeight() * 0.8);
-        openProject($("#projectFrame").attr("name"));
 
-    </script>
 <script language="javascript">
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
@@ -71,4 +63,14 @@ function openProject(projectName)
         closeNav();
     }
 </script>
+    <script>
+        window.onscroll = function () {
+            window.scrollTo(0,0);
+        }
+        $("#navbar").load("/nav");
+        $("#projectFrame").attr("height", $(window).innerHeight() * 0.8);
+        openProject($("#projectFrame").attr("name"));
+        console.log("it's loaded!!!!!");
+
+    </script>
 </html>

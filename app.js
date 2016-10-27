@@ -29,7 +29,7 @@ app.use(require('method-override')());
 app.use(require('cookie-parser')('sciwards'));
 app.use(require('express-session')());
 //app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 // development only
 /*
@@ -41,6 +41,7 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/earn/:projectName', earn.view);
+app.get('/nav',earn.nav);
 // Example route
 // app.get('/users', user.list);
 

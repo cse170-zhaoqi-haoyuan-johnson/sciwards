@@ -10,3 +10,7 @@ exports.view = function(req, res){
   	'projectName': projectName
   });
 };
+exports.nav = function(req,res){
+	console.log("loading the nav bar");
+	res.render('persistent_tab');
+}

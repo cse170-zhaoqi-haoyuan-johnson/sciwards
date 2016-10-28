@@ -31,7 +31,7 @@ app.use(require('method-override')());
 app.use(require('cookie-parser')('sciwards'));
 app.use(require('express-session')());
 //app.use(app.router);
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, '/Public')));
 
 // development only
 /*

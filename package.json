@@ -1,0 +1,38 @@
+{
+  "name": "sciwards",
+  "version": "1.0.0",
+  "description": "cse170 project (citizen science)",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "error-handler": "^1.0.0",
+    "express-handlebars": "^3.0.0",
+    "express": "^4.14.0",
+    "express-session": "^1.14.1",
+    "favicon": "^0.0.2",
+    "http": "^0.0.0",
+    "json": "^9.0.4",
+    "logger": "^0.0.1",
+    "method-override": "^2.3.6",
+    "mongodb": "^2.2.11",
+    "mongoose": "^4.6.5",
+    "npm-flatten": "^0.0.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georgezhe/sciwards.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/georgezhe/sciwards/issues"
+  },
+  "homepage": "https://github.com/georgezhe/sciwards#readme"
+}

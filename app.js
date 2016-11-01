@@ -31,7 +31,12 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(require('method-override')());
 app.use(require('cookie-parser')('sciwards'));
-app.use(require('express-session')());
+app.use(require('express-session')({
+    secret: 'my cookie',
+    maxAge: 3600000,
+    resave: true,
+    saveUninitialized: true
+}));
 //app.use(app.router);
 app.use(express.static(path.join(__dirname, '/Public')));
 

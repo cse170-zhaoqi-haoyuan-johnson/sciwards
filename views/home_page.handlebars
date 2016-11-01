@@ -1,32 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- import JQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-        <title>
-            SciWards
-        </title>
+<head>
+    <!-- import JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-        <div id="navbar"></div>
-        <link rel="stylesheet" href="/CSS/home_page.css">
-    </head>
-    <body>
-        <div class="container">
-            <p id="project-title">
-                Available Projects
-            </p>
-            <div id="projects-wrapper">
-                <ul class="projects columns-3">
-                    <li>
-                        <a class="project-cell" href="/earn/EyeWire">
-                            <img class = "project-cell-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg" alt="">
-                            <span class="project-cell-overlay"></span>
-                            <span class="project-cell-text">EyeWire</span>
-                        </a>
-                    </li>
-                    
-                    <!-- FOR TEMPLATE use
+    <title>
+        SciWards
+    </title>
+
+    <div id="navbar"></div>
+    <link rel="stylesheet" href="/CSS/home_page.css">
+</head>
+
+<body>
+    <div class="container">
+        <p id="project-title">
+            Available Projects
+        </p>
+        <div id="projects-wrapper">
+            <ul class="projects columns-3">
+                <!-- FOR TEMPLATE use
                         #each projects to wrap around the div/ul
                         json obj should resemble:
                         "projects" : [
@@ -34,70 +28,81 @@
                               "image" : "eyewire.jpg"
                               "link" : "blah"
                             }
-                        ]
-                    <li>
-                        <a class="project-cell" href="{{link}}">
-                            <img class = "project-cell-img" src="images/{{image}}" alt="">
-                            <span class="project-cell-overlay"></span>
-                            <span class="project-cell-text">{{name}}</span>
-                        </a>
-                    </li>
-                    -->
-                    
-                    <li>
+                        ] -->
+                {{#each projects}}
+                <li>
+                    <a class="project-cell" href="{{link}}">
+                        <img class="project-cell-img" src="{{image}}" alt="">
+                        <span class="project-cell-overlay"></span>
+                        <span class="project-cell-text">{{name}}</span>
+                    </a>
+                </li>
+                {{/each}}
+                <!--<li>
+                    <a class="project-cell" href="/earn/EyeWire">
+                        <img class="project-cell-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg" alt="">
+                        <span class="project-cell-overlay"></span>
+                        <span class="project-cell-text">EyeWire</span>
+                    </a>
+                </li>
+
+
+                <li>
                     <a class="project-cell" href="/earn/eterna">
-                    <img class = "project-cell-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg06.jpg" alt="">
-                    <span class="project-cell-overlay"></span>
-                    <span class="project-cell-text">eterna</span>
+                        <img class="project-cell-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg06.jpg" alt="">
+                        <span class="project-cell-overlay"></span>
+                        <span class="project-cell-text">eterna</span>
                     </a>
 
-                    </li>
-                    <li>
+                </li>
+                <li>
                     <a class="project-cell" href="/earn/PHYLO">
-                    <img class = "project-cell-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg08.jpg" alt="">
-                    <span class="project-cell-overlay"></span>
-                    <span class="project-cell-text">PHYLO</span>
+                        <img class="project-cell-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg08.jpg" alt="">
+                        <span class="project-cell-overlay"></span>
+                        <span class="project-cell-text">PHYLO</span>
                     </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="goal-progress-wrapper">
-                <p>
-                    Goal Progress
+                </li> -->
+            </ul>
+        </div>
+        <div class="goal-progress-wrapper">
+            <p>
+                Goal Progress
+            </p>
+            <div class="goal-wrapper">
+                <img id="item-pic" src="https://pixabay.com/static/uploads/photo/2014/03/18/11/24/spring-flower-289844_640.jpg">
+                <p id="item-name">
+                    Flowers
                 </p>
-                <div class="goal-wrapper">
-                    <img id="item-pic" src="https://pixabay.com/static/uploads/photo/2014/03/18/11/24/spring-flower-289844_640.jpg">
-                    <p id="item-name">
-                        Flowers
-                    </p>
+            </div>
+            <div class="progress-wrapper">
+                <div class="progress bar-con">
+                    <div class="bar" data-percent="40"></div>
                 </div>
-                <div class="progress-wrapper">
-                     <div class="progress bar-con">
-                        <div class="bar" data-percent="40"></div>
-                    </div>
-                    <p> XXXX/XXXX Points </p>
-                </div>
+                <p> XXXX/XXXX Points </p>
             </div>
         </div>
-        
+    </div>
 
-    </body>
-    <!-- Load Navbar -->
-    <script>
-        $("#navbar").load("/nav");
-    </script>
-    
-    <script>
-        (function ( $ ) {
-          $.fn.progress = function() {
+
+</body>
+<!-- Load Navbar -->
+<script>
+    $("#navbar").load("/nav");
+
+</script>
+
+<script>
+    (function($) {
+        $.fn.progress = function() {
             var percent = this.data("percent");
-            this.css("width", percent+"%");
-          };
-        }( jQuery ));
+            this.css("width", percent + "%");
+        };
+    }(jQuery));
 
-        $(document).ready(function(){
-          $(".progress .bar").progress();
-        });
-    </script>
-        
+    $(document).ready(function() {
+        $(".progress .bar").progress();
+    });
+
+</script>
+
 </html>

@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -12,6 +11,7 @@ var index = require('./routes/index');
 var earn = require('./routes/earn');
 var home = require('./routes/home');
 var redeem = require('./routes/redeem');
+var login = require('./routes/login');
 // Example route
 // var user = require('./routes/user');
 
@@ -26,7 +26,9 @@ app.set('view engine', 'handlebars');
 //app.use(require('favicon')());
 //app.use(require('logger')('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 app.use(require('method-override')());
 app.use(require('cookie-parser')('sciwards'));
 app.use(require('express-session')());
@@ -44,12 +46,13 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/earn', earn.viewEmpty);
 app.get('/earn/:projectName', earn.view);
-app.get('/nav',earn.nav);
-app.get('/home',home.view);
-app.get('/redeem',redeem.view);
+app.get('/nav', earn.nav);
+app.get('/home', home.view);
+app.get('/redeem', redeem.view);
+app.post('/login', login.post);
 // Example route
 // app.get('/users', user.list);
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+http.createServer(app).listen(app.get('port'), function () {
+    console.log('Express server listening on port ' + app.get('port'));
 });

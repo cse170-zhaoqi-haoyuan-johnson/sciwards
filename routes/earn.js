@@ -23,6 +23,10 @@ exports.nav = function (req, res) {
             profile = data.table[i];
         console.log(data.table[i].name);
     }
-    console.log(profile);
+    if (profile == null)
+        profile = {
+            name: req.session.name,
+            score: req.session.score
+        };
     res.render('persistent_tab', profile);
 }

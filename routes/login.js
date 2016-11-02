@@ -27,6 +27,8 @@ exports.post = function (req, res, next) {
         } else {
             console.log("DATA FILE DOES NOT EXIST!!!!!!");
         }
+        req.session.name = req.body.username;
+
         res.redirect('/home');
     });
 

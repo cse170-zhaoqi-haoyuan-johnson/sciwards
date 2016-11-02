@@ -3,6 +3,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/CSS/earn_page.css">
         <div id="navbar"></div>
+             <!-- Load Navbar -->
+<script src="/Javascript/earn_page.js"></script>
 </head>
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -26,9 +28,7 @@
     
 </div>
     </body>
-         <!-- Load Navbar -->
-
-<script language="javascript">
+<script>
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
@@ -41,11 +41,13 @@ function closeNav() {
     document.body.style.backgroundColor = "white";
 }
     
+    
 function openProject(projectName)
     {
         if (projectName == "EyeWire")
         {
             $("#projectFrame").attr("src", "http://eyewire.org/");
+            setInterval(EyeWireScrape, 1000);
         }
         else if (projectName == "eterna")
         {
@@ -71,12 +73,16 @@ function openProject(projectName)
         
         closeNav();
     }
+    var numClicks;
+
+    
+
 function openProjectURL(projectName)
 {
     window.location.href ='/earn/'+projectName; 
-}
-</script>
-    <script>
+}        
+
+
         window.onscroll = function () {
             window.scrollTo(0,0);
         }
@@ -84,6 +90,5 @@ function openProjectURL(projectName)
         $("#projectFrame").attr("height", $(window).innerHeight() * 0.8);
         openProject($("#projectFrame").attr("name"));
         console.log("it's loaded!!!!!");
-
-    </script>
+</script>
 </html>

@@ -27,12 +27,43 @@ ul.products li {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    width: 17.5%; /* default 5 columns */
 }
 
 ul.products li img {
 	max-width: 100%;
 	height: auto;
 	margin: 0 0 10px;
+}
+
+.buttons-wrapper {
+    margin: auto;
+    width: 100%;
+}
+
+.btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: .7em .2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    font-variant: small-caps;
+    margin-left: 2%;
+    width: 46%;
+    -webkit-transition-duration: 0.5    s; /* Safari */
+    transition-duration: 0.8s;
+    cursor: pointer;
+}
+
+.redeem-button, .goal-button {
+}
+
+.redeem-button:hover, .goal-button:hover {
+    background-color: #333;
+    color: white;
 }
 
 /* class for 2 columns */
@@ -50,6 +81,12 @@ ul.products.columns-4 li {
 
 ul.products.columns-5 li {
     width: 17.5%;
+}
+
+@media (max-width: 760px) {
+     ul.products li {
+        width: 30.83% !important; /* over-ride all li styles */
+    }
 }
 
 @media (max-width: 480px) {

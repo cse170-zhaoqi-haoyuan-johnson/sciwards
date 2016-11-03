@@ -17,10 +17,13 @@ exports.post = function (req, res, next) {
                     if (inData == 0) {
                         obj.table.push({
                             name: req.body.username,
-                            score: 0
+                            score: 0,
+                            reward: ""
+
                         });
                         var json = JSON.stringify(obj);
-                        fs.writeFile('data/data.json', json);
+                        fs.writeFileSync('data/data.json', json);
+                        console.log("Wrote:" + req.body.username + " to file!!!");
                     }
                 }
             });
@@ -28,7 +31,7 @@ exports.post = function (req, res, next) {
             console.log("DATA FILE DOES NOT EXIST!!!!!!");
         }
         req.session.name = req.body.username;
-
+        req.session.score = 0;
         res.redirect('/home');
     });
 

@@ -19,9 +19,10 @@
     <body height=100%>
 <div id="main">
 <!-- Use any element to open the sidenav -->
-<button onclick="openNav()">Select Project</button>
-<div>
-    <iframe id="projectFrame" name={{projectName}} width=100%></iframe>   
+<button id= "selectProjectButton" onclick="openNav()">Select Project</button>
+<button id="finishedButton" onclick="taskFinished()">Finished My Task!</button>
+<div onmouseenter="entered()" onmouseleave="exited()">
+    <iframe id="projectFrame" name={{projectName}} width=98% height=98% ></iframe>   
 </div>
 <h1 id="selectProjectPrompt" align="center" visible="false">Please Select a Project!</h1>
  
@@ -29,25 +30,54 @@
 </div>
     </body>
 <script>
+const UPDATE_INTERVAL = 300;
+const REQUIRED_USAGE_TIME = 20000; //in ms
+var tempTime = 0;
+var interval_js_id;
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
-    
+
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
     document.body.style.backgroundColor = "white";
 }
     
+function entered()
+{
+    interval_js_id = setInterval(trackTime, UPDATE_INTERVAL);
+}
+function exited()
+{
+    clearInterval(interval_js_id);
+}
+function trackTime()
+{
+     tempTime += UPDATE_INTERVAL;  
+     console.log(tempTime);
+}
     
+function taskFinished()
+{
+    if (tempTime < REQUIRED_USAGE_TIME)
+    {
+        window.alert("You have not spent enough time on the task. Please complete the task.");
+    }
+    else
+    {
+        window.alert("Congrats! You got +5 Points!");     
+        tempTime = 0;
+    }
+}
 function openProject(projectName)
     {
         if (projectName == "EyeWire")
         {
             $("#projectFrame").attr("src", "http://eyewire.org/");
-            setInterval(EyeWireScrape, 1000);
+            
         }
         else if (projectName == "eterna")
         {

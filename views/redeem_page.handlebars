@@ -6,7 +6,7 @@
         SciWards
     </title>
     <div id="navbar"></div>
-    <link rel="stylesheet" href="../Public/CSS/redeem_page.css">
+    <link rel="stylesheet" href="/CSS/redeem_page.css">
 </head>
 
 <body>
@@ -16,76 +16,63 @@
         <h2>Redeem</h2>
         <input type="text" name="search" placeholder="Search..">
         <div class="products-wrapper">
-            <ul class="products columns-5">
+            <ul class="products">
+                <!-- TEMPLATE
+                <li>
+                    <img src="{{image}}"/>
+                    <h3>{{name}}</h3>
+                    <p>{{description}}</p>
+                </li>
+                -->
                 <li>
                     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg"/>
                     <h3>Kitty</h3>
                     <p>A cute cat.</p>
+                    <div class="buttons-wrapper">
+                        <button type="button" class="btn redeem-button">redeem</button>
+                        <button type="button" class="btn goal-button">set goal</button>
+                    </div>
                 </li>
                 <li>
                     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg"/>
                     <h3>Kitty</h3>
                     <p>A cute cat.</p>
+                    <div class="buttons-wrapper">
+                        <button type="button" class="btn redeem-button">redeem</button>
+                        <button type="button" class="btn goal-button">set goal</button>
+                    </div>
                 </li>
                 <li>
                     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg"/>
                     <h3>Kitty</h3>
                     <p>A cute cat.</p>
+                    <div class="buttons-wrapper">
+                        <button type="button" class="btn redeem-button">redeem</button>
+                        <button type="button" class="btn goal-button">set goal</button>
+                    </div>
                 </li>
                 <li>
                     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg"/>
                     <h3>Kitty</h3>
                     <p>A cute cat.</p>
+                    <div class="buttons-wrapper">
+                        <button type="button" class="btn redeem-button">redeem</button>
+                        <button type="button" class="btn goal-button">set goal</button>
+                    </div>
                 </li>
                 <li>
                     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg"/>
                     <h3>Kitty</h3>
                     <p>A cute cat.</p>
+                    <div class="buttons-wrapper">
+                        <button type="button" class="btn redeem-button">redeem</button>
+                        <button type="button" class="btn goal-button">set goal</button>
+                    </div>
                 </li>
             </ul>
         </div>
     </div>
-    <!--
-    <table border="2" cellpadding="100">
-        <tr>
-            <th>Reward 1
-                <div>
-                    <button type="button">Get!!</button>
-                </div>
-            </th>
-            <th>Reward 2
-                <div>
-                    <button type="button">Get!!</button>
-                </div>
-            </th>
-            <td><b>Reward 3</b>
-                <div>
-                    <button type="button">Get!!</button>
-                </div>
-            </td>
-        </tr>
-
-        <tr>
-            <td><b>Reward 4</b>
-                <div>
-                    <button type="button">Get!!</button>
-                </div>
-            </td>
-            <td><b>Reward 5</b>
-                <div>
-                    <button type="button">Get!!</button>
-                </div>
-            </td>
-            <td> <b>Reward 6</b>
-                <div>
-                    <button type="button">Get!!</button>
-                </div>
-            </td>
-        </tr>
-        
-    </table>
-    -->
-     <!-- Load Navbar -->
+    <!-- Load Navbar -->
     <script>
         $("#navbar").load("/nav");
     </script>

@@ -1,124 +1,126 @@
 <html>
+
 <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="/CSS/earn_page.css">
-        <div id="navbar"></div>
-             <!-- Load Navbar -->
-<script src="/Javascript/earn_page.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/CSS/earn_page.css">
+    <div id="navbar"></div>
+    <!-- Load Navbar -->
+    <script src="/Javascript/earn_page.js"></script>
 </head>
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="javascript:void(0)" onclick="openProjectURL('EyeWire')">EyeWire</a>
-  <a href="javascript:void(0)" onclick="openProjectURL('eterna')">eterna</a>
-  <a href="javascript:void(0)" onclick="openProjectURL('PHYLO')">PHYLO</a>
-  <a href="javascript:void(0)" onclick="openProjectURL('nightjar')">nightjar</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" onclick="openProjectURL('EyeWire')">EyeWire</a>
+    <a href="javascript:void(0)" onclick="openProjectURL('eterna')">eterna</a>
+    <a href="javascript:void(0)" onclick="openProjectURL('PHYLO')">PHYLO</a>
+    <a href="javascript:void(0)" onclick="openProjectURL('nightjar')">nightjar</a>
 </div>
 
 <br>
 <br>
-    <body height=100%>
-<div id="main">
-<!-- Use any element to open the sidenav -->
-<button id= "selectProjectButton" onclick="openNav()">Select Project</button>
-<button id="finishedButton" onclick="taskFinished()">Finished My Task!</button>
-<div onmouseenter="entered()" onmouseleave="exited()">
-    <iframe id="projectFrame" name={{projectName}} width=98% height=98% ></iframe>   
-</div>
-<h1 id="selectProjectPrompt" align="center" visible="false">Please Select a Project!</h1>
- 
-    
-</div>
-    </body>
+<br>
+
+<body height=100%>
+    <div id="main">
+        <!-- Use any element to open the sidenav -->
+        <button id="selectProjectButton" onclick="openNav()">Select Project</button>
+        <button id="finishedButton" onclick="taskFinished()">Finished My Task!</button>
+        <div onmouseenter="entered()" onmouseleave="exited()">
+            <iframe id="projectFrame" name={{projectName}} width=98% height=98%></iframe>
+        </div>
+        <h1 id="selectProjectPrompt" align="center" visible="false">Please Select a Project!</h1>
+
+
+    </div>
+</body>
 <script>
-const UPDATE_INTERVAL = 300;
-const REQUIRED_USAGE_TIME = 20000; //in ms
-var tempTime = 0;
-var interval_js_id;
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-}
+    const UPDATE_INTERVAL = 300;
+    const REQUIRED_USAGE_TIME = 100; //in ms
+    var tempTime = 0;
+    var interval_js_id;
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-    document.body.style.backgroundColor = "white";
-}
-    
-function entered()
-{
-    interval_js_id = setInterval(trackTime, UPDATE_INTERVAL);
-}
-function exited()
-{
-    clearInterval(interval_js_id);
-}
-function trackTime()
-{
-     tempTime += UPDATE_INTERVAL;  
-     console.log(tempTime);
-}
-    
-function taskFinished()
-{
-    if (tempTime < REQUIRED_USAGE_TIME)
-    {
-        window.alert("You have not spent enough time on the task. Please complete the task.");
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
     }
-    else
-    {
-        window.alert("Congrats! You got +5 Points!");     
-        tempTime = 0;
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
     }
-}
-function openProject(projectName)
-    {
-        if (projectName == "EyeWire")
-        {
+
+    function entered() {
+        interval_js_id = setInterval(trackTime, UPDATE_INTERVAL);
+    }
+
+    function exited() {
+        clearInterval(interval_js_id);
+    }
+
+    function trackTime() {
+        tempTime += UPDATE_INTERVAL;
+        console.log(tempTime);
+    }
+
+    function taskFinished() {
+        if (tempTime < REQUIRED_USAGE_TIME) {
+            window.alert("You have not spent enough time on the task. Please complete the task.");
+        } else {
+            window.alert("Congrats! You got +5 Points!");
+            var str = $("#pointText").text();
+            console.log(str);
+            var points = parseInt(str);
+            console.log(points);
+            points += 5;
+            $("#pointText").text(points);
+            $.get("/point", {
+                point: 5
+            });
+            tempTime = 0;
+            //location.reload(true);
+
+        }
+    }
+
+    function openProject(projectName) {
+        if (projectName == "EyeWire") {
             $("#projectFrame").attr("src", "http://eyewire.org/");
-            
-        }
-        else if (projectName == "eterna")
-        {
-            $("#projectFrame").attr("src","http://www.eternagame.org/web/");
-        }
-        else if (projectName == "PHYLO")
-        {
-            $("#projectFrame").attr("src","http://phylo.cs.mcgill.ca");
-        }
-        else if (projectName == "nightjar")
-        {
-            $("#projectFrame").attr("src","http://nightjar.exeter.ac.uk/where-is-that-nightjar/");
-        }
-        else 
-        {
+
+        } else if (projectName == "eterna") {
+            $("#projectFrame").attr("src", "http://www.eternagame.org/web/");
+        } else if (projectName == "PHYLO") {
+            $("#projectFrame").attr("src", "http://phylo.cs.mcgill.ca");
+        } else if (projectName == "nightjar") {
+            $("#projectFrame").attr("src", "http://nightjar.exeter.ac.uk/where-is-that-nightjar/");
+        } else {
             //$("#projectFrame").attr("height", "0");
             //$("#projectFrame").attr("width", "0");
             $("#projectFrame").hide();
             $("#selectProjectPrompt").attr("visible", "true");
             console.log("empty");
         }
-        
-        
+
+
         closeNav();
     }
     var numClicks;
 
-    
-
-function openProjectURL(projectName)
-{
-    window.location.href ='/earn/'+projectName; 
-}        
 
 
-        window.onscroll = function () {
-            window.scrollTo(0,0);
-        }
-        $("#navbar").load("/nav");
-        $("#projectFrame").attr("height", $(window).innerHeight() * 0.8);
-        openProject($("#projectFrame").attr("name"));
-        console.log("it's loaded!!!!!");
+    function openProjectURL(projectName) {
+        window.location.href = '/earn/' + projectName;
+    }
+
+
+    window.onscroll = function() {
+        window.scrollTo(0, 0);
+    }
+    $("#navbar").load("/nav");
+    $("#projectFrame").attr("height", $(window).innerHeight() * 0.8);
+    openProject($("#projectFrame").attr("name"));
+    console.log("it's loaded!!!!!");
+
 </script>
+
 </html>

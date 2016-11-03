@@ -9,7 +9,10 @@
             <li>
                 <button class="dropdown dropbtn" onclick="myFunction()">
                     Welcome, {{name}}
-                    <br> Point Count {{score}}
+                    <br> Point Count
+                    <div id="pointText">
+                        {{score}}
+                    </div>
                 </button>
                 <div id="myDropdown" class="dropdown-content">
                     <a href="/" align="center">Sign Out</a>
@@ -21,7 +24,7 @@
 <br>
 <script>
     /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
+     */
     function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
     }

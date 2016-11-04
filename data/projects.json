@@ -3,23 +3,23 @@
      "projects": [
          {
              "name": "Eyewire",
-             "image": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg",
+             "image": "/Images/eyewire.jpg",
              "link": "/earn/EyeWire"
         },
          {
              "name": "Eterna",
-             "image": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg",
+             "image": "/Images/eterna.jpg",
              "link": "/earn/eterna"
         },
          {
              "name": "Phylo",
-             "image": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg",
+             "image": "/Images/phylo.jpg",
              "link": "/earn/PHYLO"
         },
 
          {
              "name": "NightJar",
-             "image": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg",
+             "image": "/Images/nightjar.jpg",
              "link": "/earn/nightjar"
         }
      ]

@@ -22,8 +22,6 @@ exports.subPoint = function (req, res, next) {
             }
             var json = JSON.stringify(obj);
             fs.writeFileSync('data/data.json', json);
-            console.log("Wrote:" + profile.name + " to file!!!");
-            console.log("Score:     " + profile.score);
             res.redirect(req.get('referer'));
         }
     });
@@ -45,10 +43,7 @@ exports.setGoal = function (req, res, next) {
             }
             var json = JSON.stringify(obj);
             fs.writeFileSync('data/data.json', json);
-            console.log("Wrote:" + profile.name + " to file!!!");
-            console.log("Score:     " + profile.score);
             res.redirect(req.get('referer'));
         }
     });
 }
-

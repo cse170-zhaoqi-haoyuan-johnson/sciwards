@@ -69,17 +69,25 @@
                 Goal Progress
             </p>
             <div class="goal-wrapper">
-                <img id="item-pic" src="https://pixabay.com/static/uploads/photo/2014/03/18/11/24/spring-flower-289844_640.jpg">
+                {{#if rewards}}
+                <img id="item-pic" src="{{rewards.image}}">
                 <p id="item-name">
-                    Flowers
+                    {{rewards.name}}
                 </p>
+                {{else}}
+                <h1>
+                    Please set a goal
+                </h1>
+                {{/if}}
             </div>
+            {{#if rewards}}
             <div class="progress-wrapper">
                 <div class="progress bar-con">
-                    <div class="bar" data-percent="40"></div>
+                    <div class="bar" id="progressBar" data-percent="0"></div>
                 </div>
-                <p> XXXX/XXXX Points </p>
+                <div id="goal-points"> {{rewards.price}} Points</div>
             </div>
+            {{/if}}
         </div>
     </div>
 
@@ -88,9 +96,7 @@
 <!-- Load Navbar -->
 <script>
     $("#navbar").load("/nav");
-
 </script>
-
 <script>
     (function($) {
         $.fn.progress = function() {
@@ -100,9 +106,36 @@
     }(jQuery));
 
     $(document).ready(function() {
-        $(".progress .bar").progress();
+        
+        
     });
-
+    
+    function loadPoints() {
+        var currPointCount = ($("#pointText").text()) + "/";
+        console.log(currPointCount);
+        document.getElementById("goal-points").prepend(currPointCount);
+    }
+    
+    function calcPercent(total, req) {
+        if(total > req) {
+            return 100;
+        }
+        else { 
+            return (total/req*100);
+        }
+    }
+    
+    function loadProgress() {
+        var totalPoints = parseInt($("#pointText").text());
+        var itemPoints = {{rewards.price}};
+        var percent = calcPercent(totalPoints, itemPoints);
+        console.log(percent);
+        document.getElementById("progressBar").setAttribute("data-percent", percent);
+        $(".progress .bar").progress();
+    }
+    
+    setTimeout(loadPoints, 1000);
+    setTimeout(loadProgress, 1000);
 </script>
 
 </html>

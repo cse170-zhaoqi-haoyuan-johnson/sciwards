@@ -54,6 +54,8 @@ app.get('/earn/:projectName', earn.view);
 app.get('/nav', earn.nav);
 app.get('/home', home.view);
 app.get('/redeem', redeem.view);
+app.post('/', redeem.subPoint);
+app.post('/', redeem.setGoal);
 app.post('/login', login.post);
 app.get('/point', earn.point);
 // Example route

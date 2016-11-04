@@ -1,0 +1,34 @@
+{
+    "rewards": [
+        {
+            "name": "Kitty",
+            "image": "",
+            "price": 100000,
+            "description": "A cute cat"
+        },
+        {
+            "name": "Puppy",
+            "image": "",
+            "price": 100000,
+            "description": "A cute puppy"
+        },
+        {
+            "name": "Bicyle",
+            "image": "",
+            "price": 100000,
+            "description": "A cool bicycle"
+        },
+        {
+            "name": "Flowers",
+            "image": "",
+            "price": 100000,
+            "description": "Beautiful flowers"
+        },
+        {
+            "name": "Pineapple Backpacks",
+            "image": "",
+            "price": 100000,
+            "description": "What everyone needs"
+        }
+    ]
+}

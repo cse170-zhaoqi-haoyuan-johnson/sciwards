@@ -15,65 +15,36 @@
         <input type="text" name="search" placeholder="Search..">
         <div class="products-wrapper">
             <ul class="products">
-                <!-- TEMPLATE
+                <!-- TEMPLATE -->
+                {{#each rewards}}
                 <li>
                     <img src="{{image}}"/>
+                    <h3>{{price}} points</h3>
                     <h3>{{name}}</h3>
                     <p>{{description}}</p>
+                    <div class="buttons-wrapper">
+                        <button type="button" class="btn redeem-button">redeem</button>
+                        <button type="button" class="btn goal-button">set goal</button>
+                    </div>
+                </li>
+                {{/each}}
+                <!--
+                <li>
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg" />
+                    <h3>Kitty</h3>
+                    <p>A cute cat.</p>
+                    <div class="buttons-wrapper">
+                        <button type="button" class="btn redeem-button">redeem</button>
+                        <button type="button" class="btn goal-button">set goal</button>
+                    </div>
                 </li>
                 -->
-                <li>
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg"/>
-                    <h3>Kitty</h3>
-                    <p>A cute cat.</p>
-                    <div class="buttons-wrapper">
-                        <button type="button" class="btn redeem-button">redeem</button>
-                        <button type="button" class="btn goal-button">set goal</button>
-                    </div>
-                </li>
-                <li>
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg"/>
-                    <h3>Kitty</h3>
-                    <p>A cute cat.</p>
-                    <div class="buttons-wrapper">
-                        <button type="button" class="btn redeem-button">redeem</button>
-                        <button type="button" class="btn goal-button">set goal</button>
-                    </div>
-                </li>
-                <li>
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg"/>
-                    <h3>Kitty</h3>
-                    <p>A cute cat.</p>
-                    <div class="buttons-wrapper">
-                        <button type="button" class="btn redeem-button">redeem</button>
-                        <button type="button" class="btn goal-button">set goal</button>
-                    </div>
-                </li>
-                <li>
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg"/>
-                    <h3>Kitty</h3>
-                    <p>A cute cat.</p>
-                    <div class="buttons-wrapper">
-                        <button type="button" class="btn redeem-button">redeem</button>
-                        <button type="button" class="btn goal-button">set goal</button>
-                    </div>
-                </li>
-                <li>
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg"/>
-                    <h3>Kitty</h3>
-                    <p>A cute cat.</p>
-                    <div class="buttons-wrapper">
-                        <button type="button" class="btn redeem-button">redeem</button>
-                        <button type="button" class="btn goal-button">set goal</button>
-                    </div>
-                </li>
             </ul>
         </div>
     </div>
     <!-- Load Navbar -->
     <script>
         $("#navbar").load("/nav");
-        
         function redeem(name, value)
         {
             var currPointCount = parseInt($("#pointText").text());

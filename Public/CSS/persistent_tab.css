@@ -36,14 +36,19 @@ body
 
 #nav ul li
 { 
-    display: inline-block;
+    display: table-cell;
     text-align: center;
-    width: 24%;
+    width: 19%;
     height: 100%;
     
 }
+#nav ul button
+{ 
+    display: table-cell;
 
-#nav ul li:hover
+    
+}
+#nav ul a:hover
 { 
     background-color: #333; 
 }
@@ -81,7 +86,14 @@ body
 
 
 
-
+.navbtn {
+    background-color: #222;
+    color: #4CAF50;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
 
 /* Dropdown Button */
 .dropbtn {

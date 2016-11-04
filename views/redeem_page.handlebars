@@ -10,8 +10,6 @@
 </head>
 
 <body>
-    <br>
-    <br>
     <div class="container">
         <h2>Redeem</h2>
         <input type="text" name="search" placeholder="Search..">
@@ -75,6 +73,34 @@
     <!-- Load Navbar -->
     <script>
         $("#navbar").load("/nav");
+        
+        function redeem(name, value)
+        {
+            var currPointCount = parseInt($("#pointText").text());
+            // insufficient funds
+            if (currPointCount < value)
+                {
+                    alert("We're sorry, you do not have enough points to redeem this prize yet. Keep earning!")
+                }
+            else
+            {
+                // confirm redemption
+                if (confirm("Are you sure you want to redeem \"" + name + "\" for " + value + " points?"))
+                {
+                        // backend remove points
+                        currPointCount -= 5;
+                        alert("Congrats, \"" + name + "\" has been redeemed! you have " + currPointCount + " points remaining.");
+                }
+                else
+                {
+                    
+                }
+            }
+        }
+        function setGoal(name, value)
+        {
+            alert("You have set " + name + " as your goal!");
+        }
     </script>
 </body>
 

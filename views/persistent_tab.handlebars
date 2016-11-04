@@ -3,24 +3,43 @@
 <div id="nav">
     <div id="nav-wrapper">
         <ul>
-            <li><a href="/home">Home</a></li>
-            <li><a href="/earn">Earn</a></li>
-            <li><a href="/redeem">Redeem</a></li>
+            <li><a class="navbtn" href="/home" border="none">Home</a></li>
+            <li><a class="navbtn"  href="/earn">Earn</a></li>
+            <li><a class="navbtn"  href="/redeem">Redeem</a></li>
             <li>
-                <button class="dropdown dropbtn" onclick="myFunction()">
-                    Welcome, {{name}}
-                    <br> Point Count
-                    <div id="pointText">
-                        {{score}}
+                    <button class="btnarea dropdown navbtn" disabled>
+                        
+                        Point Count:
+                        
+                        <button class="btnarea dropdown navbtn" id="pointText" onclick="redeemFunction()" disabled>
+                        
+                            {{score}}
+                        </button>
+                    </button>
+
+                    <div id="redeemDropDown" class="dropdown-content">
+                        <a href="/redeem" align="center">Redeem</a>
                     </div>
+            </li>
+            <li>
+                <button class="btnarea dropdown dropbtn" onclick="myFunction()">
+                    
+                    Welcome, {{name}}
+                    
+
                 </button>
+          
                 <div id="myDropdown" class="dropdown-content">
                     <a href="/" align="center">Sign Out</a>
                 </div>
             </li>
+            
         </ul>
     </div>
 </div>
+<br>
+<br>
+<br>
 <br>
 <script>
     /* When the user clicks on the button, 
@@ -28,10 +47,15 @@
     function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
     }
+    function redeemFunction() {
+        document.getElementById("redeemDropdown").classList.toggle("show");
+    }
 
     // Close the dropdown menu if the user clicks outside of it
+    /*
     window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
+        
+        if (!event.target.matches('.btnarea')) {
 
             var dropdowns = document.getElementsByClassName("dropdown-content");
             var i;
@@ -42,6 +66,8 @@
                 }
             }
         }
+        
     }
+    */
 
 </script>

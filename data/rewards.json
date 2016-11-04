@@ -2,31 +2,31 @@
     "rewards": [
         {
             "name": "Kitty",
-            "image": "",
+            "image": "Images/ProductImages/kitty.jpg",
             "price": 100000,
             "description": "A cute cat"
         },
         {
             "name": "Puppy",
-            "image": "",
+            "image": "Images/ProductImages/puppyA.jpg",
             "price": 100000,
             "description": "A cute puppy"
         },
         {
             "name": "Bicyle",
-            "image": "",
+            "image": "Images/ProductImages/bicycleA.jpg",
             "price": 100000,
             "description": "A cool bicycle"
         },
         {
             "name": "Flowers",
-            "image": "",
+            "image": "Images/ProductImages/flowersA.jpg",
             "price": 100000,
             "description": "Beautiful flowers"
         },
         {
             "name": "Pineapple Backpacks",
-            "image": "",
+            "image": "Images/ProductImages/pineappleA.jpg",
             "price": 100000,
             "description": "What everyone needs"
         }

@@ -28,8 +28,8 @@ exports.nav = function (req, res) {
                 }
             }
             console.log("in NAV");
-            console.log("Wrote in nav:" + profile.name + " to file!!!");
-            console.log("Score in nav:     " + profile.score);
+            //console.log("Wrote in nav:" + profile.name + " to file!!!");
+            //console.log("Score in nav:     " + profile.score);
             res.render('persistent_tab', profile);
             //res.redirect(req.get('/nav'));
         }

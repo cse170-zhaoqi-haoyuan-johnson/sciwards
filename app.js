@@ -5,13 +5,14 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var handlebars = require('express-handlebars')
-
+var exphbs = require('express-handlebars');
 var index = require('./routes/index');
 var earn = require('./routes/earn');
 var home = require('./routes/home');
 var redeem = require('./routes/redeem');
 var login = require('./routes/login');
+
+
 // Example route
 // var user = require('./routes/user');
 
@@ -21,8 +22,17 @@ var bodyParser = require('body-parser');
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', handlebars());
+//app.engine('handlebars', handlebars());
+app.engine('handlebars', exphbs({	
+    helpers: { 
+        json: function (context) { 
+            return JSON.stringify(context); 
+        } 
+    }
+}));
+
 app.set('view engine', 'handlebars');
+
 //app.use(require('favicon')());
 //app.use(require('logger')('dev'));
 app.use(bodyParser.json());
@@ -54,8 +64,8 @@ app.get('/earn/:projectName', earn.view);
 app.get('/nav', earn.nav);
 app.get('/home', home.view);
 app.get('/redeem', redeem.view);
-app.post('/', redeem.subPoint);
-app.post('/', redeem.setGoal);
+app.post('/subPoint', redeem.subPoint);
+app.post('/setGoal', redeem.setGoal);
 app.post('/login', login.post);
 app.get('/point', earn.point);
 // Example route

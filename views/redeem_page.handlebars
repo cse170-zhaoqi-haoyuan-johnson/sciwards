@@ -2,6 +2,9 @@
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        
+    </script>
     <title>
         SciWards
     </title>
@@ -23,8 +26,8 @@
                     <h3>{{name}}</h3>
                     <p>{{description}}</p>
                     <div class="buttons-wrapper">
-                        <button type="button" class="btn redeem-button">redeem</button>
-                        <button type="button" class="btn goal-button">set goal</button>
+                        <button type="button" class="btn redeem-button" onclick="redeem({{json name}}, {{json price}})">redeem</button>
+                        <button type="button" class="btn goal-button" onclick="setGoal({{json name}}, {{json price}})">set goal</button>
                     </div>
                 </li>
                 {{/each}}
@@ -44,22 +47,26 @@
     </div>
     <!-- Load Navbar -->
     <script>
+
         $("#navbar").load("/nav");
-        function redeem(name, value)
+        function redeem(name, price)
         {
             var currPointCount = parseInt($("#pointText").text());
             // insufficient funds
-            if (currPointCount < value)
+            if (currPointCount < price)
                 {
                     alert("We're sorry, you do not have enough points to redeem this prize yet. Keep earning!")
                 }
             else
             {
                 // confirm redemption
-                if (confirm("Are you sure you want to redeem \"" + name + "\" for " + value + " points?"))
+                if (confirm("Are you sure you want to redeem \"" + name + "\" for " + price + " points?"))
                 {
+                        
                         // backend remove points
-                        currPointCount -= 5;
+                        $.post('/subPoint',{price: price});
+                        currPointCount -= price;
+                        $("#pointText").text(currPointCount);
                         alert("Congrats, \"" + name + "\" has been redeemed! you have " + currPointCount + " points remaining.");
                 }
                 else
@@ -68,9 +75,10 @@
                 }
             }
         }
-        function setGoal(name, value)
+        function setGoal(name, price)
         {
             alert("You have set " + name + " as your goal!");
+            $.post('/setGoal',{reward:name});
         }
     </script>
 </body>

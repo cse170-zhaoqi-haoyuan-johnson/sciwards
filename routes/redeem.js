@@ -1,3 +1,4 @@
+var fs = require('fs');
 var rewards = require('../data/rewards.json');
 exports.view = function (req, res) {
     console.log("loading the nav bar");
@@ -11,10 +12,11 @@ exports.subPoint = function (req, res, next) {
         } else {
             var profile;
             var obj = JSON.parse(data);
+            console.log(req.body.price);
             var inData = 0;
             for (var i = 0; i < obj.table.length; i++) {
                 if (req.session.name == obj.table[i].name) {
-                    obj.table[i].score -= req.body.rewardprice;
+                    obj.table[i].score -= req.body.price;
                     profile = obj.table[i];
                 }
             }
@@ -49,3 +51,4 @@ exports.setGoal = function (req, res, next) {
         }
     });
 }
+

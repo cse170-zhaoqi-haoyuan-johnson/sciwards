@@ -18,8 +18,8 @@ exports.post = function (req, res, next) {
                         obj.table.push({
                             name: req.body.username,
                             score: 0,
+                            level: 1,
                             reward: ""
-
                         });
                         var json = JSON.stringify(obj);
                         fs.writeFileSync('data/data.json', json);

@@ -10,14 +10,12 @@ exports.subPoint = function (req, res, next) {
         if (err) {
             console.log(err);
         } else {
-            var profile;
             var obj = JSON.parse(data);
             console.log(req.body.price);
             var inData = 0;
             for (var i = 0; i < obj.table.length; i++) {
                 if (req.session.name == obj.table[i].name) {
-                    obj.table[i].score -= req.body.price;
-                    profile = obj.table[i];
+                    obj.table[i].score += 1;
                 }
             }
             var json = JSON.stringify(obj);

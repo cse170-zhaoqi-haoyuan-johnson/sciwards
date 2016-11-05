@@ -1,1 +1,31 @@
-{"table":[{"name":"testing","score":30,"reward":""},{"name":"abc","score":140,"reward":""},{"name":"zxcvxkljl;dsaf","score":0,"reward":""},{"name":"cjvl;jfas;ldf","score":5,"reward":""},{"name":"tesint","score":5,"reward":""},{"name":"","score":25,"reward":""},{"name":"george","score":999399999,"reward":"Puppy"},{"name":"geor","score":0,"reward":""},{"name":"abcdefg","score":5,"level":1}]}
+{
+    "table": [{
+        "name": "testing",
+        "score": 30,
+        "reward": ""
+    }, {
+        "name": "abc",
+        "score": 140,
+        "reward": ""
+    }, {
+        "name": "zxcvxkljl;dsaf",
+        "score": 0,
+        "reward": ""
+    }, {
+        "name": "cjvl;jfas;ldf",
+        "score": 5,
+        "reward": ""
+    }, {
+        "name": "tesint",
+        "score": 5,
+        "reward": ""
+    }, {
+        "name": "",
+        "score": 25,
+        "reward": ""
+    }, {
+        "name": "george",
+        "score": 999399999,
+        "reward": "Puppy"
+    }]
+}

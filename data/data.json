@@ -1,7 +1,7 @@
 {
     "table": [{
-        "name": "testing",
-        "score": 30,
+        "name": "test",
+        "score": 300,
         "reward": ""
     }, {
         "name": "abc",
@@ -21,11 +21,23 @@
         "reward": ""
     }, {
         "name": "",
-        "score": 25,
-        "reward": ""
+        "score": 5000,
+        "reward": "Puppy"
     }, {
         "name": "george",
-        "score": 999399999,
+        "score": 999299999,
         "reward": "Puppy"
+    }, {
+        "name": "geor",
+        "score": 0,
+        "reward": ""
+    }, {
+        "name": "pika",
+        "score": 15,
+        "reward": "Puppy"
+    }, {
+        "name": "pikachu",
+        "score": 0,
+        "reward": ""
     }]
 }

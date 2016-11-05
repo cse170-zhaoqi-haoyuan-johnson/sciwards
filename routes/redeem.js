@@ -5,7 +5,7 @@ exports.view = function (req, res) {
     res.render('redeem_page', rewards);
 }
 
-exports.subPoint = function (req, res, next) {
+exports.levelUp = function (req, res, next) {
     fs.readFile('data/data.json', function readFileCallback(err, data) {
         if (err) {
             console.log(err);
@@ -15,7 +15,8 @@ exports.subPoint = function (req, res, next) {
             var inData = 0;
             for (var i = 0; i < obj.table.length; i++) {
                 if (req.session.name == obj.table[i].name) {
-                    obj.table[i].score += 1;
+                    obj.table[i].level += 1;
+                    obj.table[i].score = 0;
                 }
             }
             var json = JSON.stringify(obj);

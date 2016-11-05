@@ -23,11 +23,11 @@ var bodyParser = require('body-parser');
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 //app.engine('handlebars', handlebars());
-app.engine('handlebars', exphbs({	
-    helpers: { 
-        json: function (context) { 
-            return JSON.stringify(context); 
-        } 
+app.engine('handlebars', exphbs({
+    helpers: {
+        json: function (context) {
+            return JSON.stringify(context);
+        }
     }
 }));
 
@@ -64,7 +64,7 @@ app.get('/earn/:projectName', earn.view);
 app.get('/nav', earn.nav);
 app.get('/home', home.view);
 app.get('/redeem', redeem.view);
-app.post('/subPoint', redeem.subPoint);
+app.post('/levelUp', redeem.levelUp);
 app.post('/setGoal', redeem.setGoal);
 app.post('/login', login.post);
 app.get('/point', earn.point);

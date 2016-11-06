@@ -30,7 +30,8 @@
 </body>
 <script>
     const UPDATE_INTERVAL = 300;
-    const REQUIRED_USAGE_TIME = 5000; //in ms
+    const REQUIRED_USAGE_TIME = 100; //in ms
+    var nextLevelExp = '{{{userData.nextLevelExp}}}';
     var tempTime = 0;
     var interval_js_id;
 
@@ -63,17 +64,31 @@
         if (tempTime < REQUIRED_USAGE_TIME) {
             window.alert("You have not spent enough time on the task. Please complete the task.");
         } else {
-            window.alert("Congrats! You got +5 Points!");
+            window.alert("Congrats! You got " + Math.ceil(Math.sqrt(tempTime/1000)) + " exp!");
             var str = $("#pointText").text();
             console.log(str);
             var points = parseInt(str);
             console.log(points);
-            points += 5;
+            points += Math.ceil(Math.sqrt(tempTime/1000));
+            console.log(nextLevelExp);
+            if (points >= nextLevelExp)
+            {
+                    points %= nextLevelExp;
+                    
+                    nextLevelExp *= 1.5;
+                    $.post("/levelUp", {point: points, updatedNextLevelExp: nextLevelExp});
+                    $("#pointText").text(points);
+                
+            }
+            else
+            {
             $("#pointText").text(points);
-            $.get("/point", {
-                point: 5
+                console.log("points " + points);
+            $.post("/point", {
+                point: points
             });
             tempTime = 0;
+            }
             //location.reload(true);
 
         }
@@ -116,6 +131,8 @@
     $("#projectFrame").attr("height", $(window).innerHeight() * 0.8);
     openProject($("#projectFrame").attr("name"));
     console.log("it's loaded!!!!!");
+    
+    
 
 </script>
 

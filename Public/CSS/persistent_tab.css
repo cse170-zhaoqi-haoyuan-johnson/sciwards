@@ -38,7 +38,7 @@ body
 { 
     display: table-cell;
     text-align: center;
-    width: 19%;
+    width: 20%;
     height: 100%;
     
 }
@@ -138,3 +138,67 @@ body
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+
+/* Goals Container */
+
+
+.goal-progress-wrapper {
+    margin: auto;
+    position: relative;
+    height: 150px;
+    border-style: double;
+    border-width: 4px;
+    border-radius: 3px;
+    padding: 15px;
+}
+
+#item-pic{ 
+    width: 100px;
+    height: 75px;
+}
+
+.goal-wrapper {
+    position: absolute;
+    left: 5%;
+    text-align: center;
+}
+
+.progress-wrapper {
+    padding: 15px;
+    width: 100%;
+    position: absolute;
+    left: 25%;
+    text-align: center;
+}
+
+.transition (@animation: ease-in, @time: 1s) {
+  transition: width @animation @time;
+  -webkit-transition: width @animation @time;
+  -moz-transition: width @animation @time;
+  -o-transition: width @animation @time;
+            }
+            
+            .bar-con {
+              background-color: #ccc;
+              height: 0.75em;
+              margin-bottom: 1em;
+            }
+            .bar {
+              float: left;
+              height: 100%;
+              width: 0%;
+              border-radius: 5px
+            }
+            .progress .bar {
+              background-color: #03AB70;
+              transition: width ease-in 1s;
+              -webkit-transition: width ease-in-out 2s;
+              -moz-transition: width ease-in-out 2s;
+              -o-transition: width ease-in-out 2s;
+            }
+            
+            
+            .progress {
+                border-radius: 5px;
+            }

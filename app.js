@@ -67,7 +67,7 @@ app.get('/redeem', redeem.view);
 app.post('/levelUp', redeem.levelUp);
 app.post('/setGoal', redeem.setGoal);
 app.post('/login', login.post);
-app.get('/point', earn.point);
+app.post('/point', earn.point);
 // Example route
 // app.get('/users', user.list);
 

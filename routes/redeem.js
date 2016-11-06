@@ -16,7 +16,8 @@ exports.levelUp = function (req, res, next) {
             for (var i = 0; i < obj.table.length; i++) {
                 if (req.session.name == obj.table[i].name) {
                     obj.table[i].level += 1;
-                    obj.table[i].score = 0;
+                    obj.table[i].score = req.body.point;
+                    obj.table[i].nextLevelExp = req.body.updatedNextLevelExp;
                 }
             }
             var json = JSON.stringify(obj);

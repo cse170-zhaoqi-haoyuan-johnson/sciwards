@@ -5,9 +5,25 @@ var fs = require('fs');
 exports.view = function (req, res) {
     var projectName = req.params.projectName;
     console.log("Project is " + projectName);
-    res.render('earn_page', {
-        'projectName': projectName
+    fs.readFile('data/data.json', function readFileCallback(err, data) {
+        if (err) {
+            console.log(err);
+        } else {
+            var profile;
+            var obj = JSON.parse(data);
+            for (var i = 0; i < obj.table.length; i++) {
+                if (req.session.name == obj.table[i].name) {
+                    profile = obj.table[i];
+                }
+            }
+            res.render('earn_page', {
+                'projectName': projectName,
+                'userData': profile
+            });
+        }
+
     });
+
 };
 exports.viewEmpty = function (req, res) {
     console.log("Project is emtpy");
@@ -38,6 +54,7 @@ exports.nav = function (req, res) {
 }
 exports.point = function (req, res) {
     var point = req.body.point;
+    console.log("backend point: " + req.body.point);
     fs.readFile('data/data.json', function readFileCallback(err, data) {
         if (err) {
             console.log(err);
@@ -47,7 +64,7 @@ exports.point = function (req, res) {
             var inData = 0;
             for (var i = 0; i < obj.table.length; i++) {
                 if (req.session.name == obj.table[i].name) {
-                    obj.table[i].score += 5;
+                    obj.table[i].score = parseInt(point);
                     profile = obj.table[i];
                 }
             }

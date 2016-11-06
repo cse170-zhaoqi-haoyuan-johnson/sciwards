@@ -19,7 +19,8 @@ exports.post = function (req, res, next) {
                             name: req.body.username,
                             score: 0,
                             level: 1,
-                            reward: ""
+                            reward: "",
+                            nextLevelExp: 15
                         });
                         var json = JSON.stringify(obj);
                         fs.writeFileSync('data/data.json', json);

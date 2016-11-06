@@ -9,11 +9,17 @@
             <li>
                     <button class="btnarea dropdown navbtn" disabled>
                         
-                        Point Count:
-                        
-                        <button class="btnarea dropdown navbtn" id="pointText" onclick="redeemFunction()" disabled>
+                        EXP
+                        <p class=" dropdown " id="pointText" onclick="redeemFunction()" disabled>
                             {{score}}
-                        </button>
+                        </p>
+                        /
+                        <p class=" dropdown " id="nextLevelExpText" onclick="redeemFunction()" disabled>
+                        {{nextLevelExp}}
+                        </p>
+                        <div class="progress bar-con">
+                        <div class="bar" id="navProgressBar" data-percent="0"></div>
+                        </div>
                     </button>
 
                     <div id="redeemDropDown" class="dropdown-content">
@@ -38,6 +44,19 @@
 <br>
 <br>
 <script>
+    var localPercent = 0;
+    (function($) {
+        $.fn.progress = function() {
+            var percent = this.data("percent");
+            this.css("width", localPercent + "%");
+            console.log("UPDATEEEE!!" + percent);
+        };
+    }(jQuery));
+
+    $(document).ready(function() {
+        
+        
+    });
     /* When the user clicks on the button, 
      */
     function myFunction() {
@@ -46,7 +65,32 @@
     function redeemFunction() {
         document.getElementById("redeemDropdown").classList.toggle("show");
     }
-
+    
+    function calcNavPercent(total, req) {
+        if(total > req) {
+            return 100;
+        }
+        else { 
+            return (total/req*100);
+        }
+    }
+    
+    function loadNavProgress() {
+        //console.log("nextLevelExp " + nextLevelExp);
+        var totalPoints = parseInt($("#pointText").text());
+        var itemPoints = parseInt($("#nextLevelExpText").text());
+        console.log(itemPoints);
+        console.log(totalPoints);
+        var percent = calcNavPercent(totalPoints, itemPoints);
+        localPercent = percent
+        console.log("setting" + percent);
+        document.getElementById("navProgressBar").setAttribute("data-percent", percent);
+        $(".progress .bar").progress();
+    }
+    loadNavProgress();
+    setInterval(loadNavProgress, 1000);
+    
+    
     // Close the dropdown menu if the user clicks outside of it
     /*
     window.onclick = function(event) {

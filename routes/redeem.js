@@ -1,5 +1,5 @@
 var fs = require('fs');
-var rewards = require('../data/rewards.json');
+var rewards = require('../data/rewards1.json');
 exports.view = function (req, res) {
     console.log("loading the nav bar");
     fs.readFile('data/data.json', function readFileCallback(err, data) {

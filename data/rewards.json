@@ -9,19 +9,19 @@
         {
             "name": "Puppy",
             "image": "Images/ProductImages/puppyA.jpg",
-            "price": 0,
+            "price": 2,
             "description": "A cute puppy"
         },
         {
             "name": "Bicyle",
             "image": "Images/ProductImages/bicycleA.jpg",
-            "price": 0,
+            "price": 5,
             "description": "A cool bicycle"
         },
         {
             "name": "Flowers",
             "image": "Images/ProductImages/flowersA.jpg",
-            "price": 10,
+            "price": 8,
             "description": "Beautiful flowers"
         },
         {

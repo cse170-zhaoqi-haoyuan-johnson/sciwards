@@ -1,0 +1,320 @@
+{
+    "rewards": [
+        {
+            "name": "avatar_1.png",
+            "level": 1
+        }
+        , {
+            "name": "avatar_2.png",
+            "level": 1
+        }
+        , {
+            "name": "avatar_3.png",
+            "level": 1
+        }
+        , {
+            "name": "avatar_4.png",
+            "level": 1
+        }
+        , {
+            "name": "avatar_5.png",
+            "level": 1
+        }
+        , {
+            "name": "avatar_6.png",
+            "level": 1
+        }
+        , {
+            "name": "avatar_7.png",
+            "level": 1
+        }
+        , {
+            "name": "avatar_8.png",
+            "level": 1
+        }
+        , {
+            "name": "avatar_9.png",
+            "level": 1
+        }
+        , {
+            "name": "avatar_10.png",
+            "level": 2
+        }
+        , {
+            "name": "avatar_11.png",
+            "level": 2
+        }
+        , {
+            "name": "avatar_12.png",
+            "level": 2
+        }
+        , {
+            "name": "avatar_13.png",
+            "level": 2
+        }
+        , {
+            "name": "avatar_14.png",
+            "level": 2
+        }
+        , {
+            "name": "avatar_15.png",
+            "level": 2
+        }
+        , {
+            "name": "avatar_16.png",
+            "level": 2
+        }
+        , {
+            "name": "avatar_17.png",
+            "level": 2
+        }
+        , {
+            "name": "avatar_18.png",
+            "level": 2
+        }
+        , {
+            "name": "avatar_19.png",
+            "level": 2
+        }
+        , {
+            "name": "avatar_20.png",
+            "level": 3
+        }
+        , {
+            "name": "avatar_21.png",
+            "level": 3
+        }
+        , {
+            "name": "avatar_22.png",
+            "level": 3
+        }
+        , {
+            "name": "avatar_23.png",
+            "level": 3
+        }
+        , {
+            "name": "avatar_24.png",
+            "level": 3
+        }
+        , {
+            "name": "avatar_25.png",
+            "level": 3
+        }
+        , {
+            "name": "avatar_26.png",
+            "level": 3
+        }
+        , {
+            "name": "avatar_27.png",
+            "level": 3
+        }
+        , {
+            "name": "avatar_28.png",
+            "level": 3
+        }
+        , {
+            "name": "avatar_29.png",
+            "level": 3
+        }
+        , {
+            "name": "avatar_30.png",
+            "level": 4
+        }
+        , {
+            "name": "avatar_31.png",
+            "level": 4
+        }
+        , {
+            "name": "avatar_32.png",
+            "level": 4
+        }
+        , {
+            "name": "avatar_33.png",
+            "level": 4
+        }
+        , {
+            "name": "avatar_34.png",
+            "level": 4
+        }
+        , {
+            "name": "avatar_35.png",
+            "level": 4
+        }
+        , {
+            "name": "avatar_36.png",
+            "level": 4
+        }
+        , {
+            "name": "avatar_37.png",
+            "level": 4
+        }
+        , {
+            "name": "avatar_38.png",
+            "level": 4
+        }
+        , {
+            "name": "avatar_39.png",
+            "level": 4
+        }
+        , {
+            "name": "avatar_40.png",
+            "level": 5
+        }
+        , {
+            "name": "avatar_41.png",
+            "level": 5
+        }
+        , {
+            "name": "avatar_42.png",
+            "level": 5
+        }
+        , {
+            "name": "avatar_43.png",
+            "level": 5
+        }
+        , {
+            "name": "avatar_44.png",
+            "level": 5
+        }
+        , {
+            "name": "avatar_45.png",
+            "level": 5
+        }
+        , {
+            "name": "avatar_46.png",
+            "level": 5
+        }
+        , {
+            "name": "avatar_47.png",
+            "level": 5
+        }
+        , {
+            "name": "avatar_48.png",
+            "level": 5
+        }
+        , {
+            "name": "avatar_49.png",
+            "level": 5
+        }
+        , {
+            "name": "avatar_50.png",
+            "level": 6
+        }
+        , {
+            "name": "avatar_51.png",
+            "level": 6
+        }
+        , {
+            "name": "avatar_52.png",
+            "level": 6
+        }
+        , {
+            "name": "avatar_53.png",
+            "level": 6
+        }
+        , {
+            "name": "avatar_54.png",
+            "level": 6
+        }
+        , {
+            "name": "avatar_55.png",
+            "level": 6
+        }
+        , {
+            "name": "avatar_56.png",
+            "level": 6
+        }
+        , {
+            "name": "avatar_57.png",
+            "level": 6
+        }
+        , {
+            "name": "avatar_58.png",
+            "level": 6
+        }
+        , {
+            "name": "avatar_59.png",
+            "level": 6
+        }
+        , {
+            "name": "avatar_60.png",
+            "level": 7
+        }
+        , {
+            "name": "avatar_61.png",
+            "level": 7
+        }
+        , {
+            "name": "avatar_62.png",
+            "level": 7
+        }
+        , {
+            "name": "avatar_63.png",
+            "level": 7
+        }
+        , {
+            "name": "avatar_64.png",
+            "level": 7
+        }
+        , {
+            "name": "avatar_65.png",
+            "level": 7
+        }
+        , {
+            "name": "avatar_66.png",
+            "level": 7
+        }
+        , {
+            "name": "avatar_67.png",
+            "level": 7
+        }
+        , {
+            "name": "avatar_68.png",
+            "level": 7
+        }
+        , {
+            "name": "avatar_69.png",
+            "level": 7
+        }
+        , {
+            "name": "avatar_70.png",
+            "level": 8
+        }
+        , {
+            "name": "avatar_71.png",
+            "level": 8
+        }
+        , {
+            "name": "avatar_72.png",
+            "level": 8
+        }
+        , {
+            "name": "avatar_73.png",
+            "level": 8
+        }
+        , {
+            "name": "avatar_74.png",
+            "level": 8
+        }
+        , {
+            "name": "avatar_75.png",
+            "level": 8
+        }
+        , {
+            "name": "avatar_76.png",
+            "level": 8
+        }
+        , {
+            "name": "avatar_77.png",
+            "level": 8
+        }
+        , {
+            "name": "avatar_78.png",
+            "level": 8
+        }
+        , {
+            "name": "avatar_79.png",
+            "level": 8
+        }
+    ]
+}

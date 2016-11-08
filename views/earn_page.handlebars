@@ -34,7 +34,7 @@
     var nextLevelExp = '{{{userData.nextLevelExp}}}';
     var tempTime = 0;
     var interval_js_id;
-
+    $("#navbar").load("/nav");
     function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
         document.getElementById("main").style.marginLeft = "250px";
@@ -71,14 +71,22 @@
             console.log(points);
             points += Math.ceil(Math.sqrt(tempTime/1000));
             console.log(nextLevelExp);
+            // level up!
             if (points >= nextLevelExp)
             {
+                    
                     points %= nextLevelExp;
                     
                     nextLevelExp *= 1.5;
+                    nextLevelExp = Math.ceil(nextLevelExp);
                     $.post("/levelUp", {point: points, updatedNextLevelExp: nextLevelExp});
                     $("#pointText").text(points);
+                    $("#nextLevelExpText").text(nextLevelExp);
                 
+                    var currentLevel = parseInt($("#currentLevelText").text());
+                    currentLevel++;
+                    $("#currentLevelText").text(currentLevel);
+                    window.alert("Wooo! You leveled up to Level " + $("#currentLevelText").text());
             }
             else
             {
@@ -87,10 +95,9 @@
             $.post("/point", {
                 point: points
             });
-            tempTime = 0;
             }
             //location.reload(true);
-
+            tempTime =0;
         }
     }
 
@@ -127,7 +134,7 @@
     window.onscroll = function() {
         window.scrollTo(0, 0);
     }
-    $("#navbar").load("/nav");
+    
     $("#projectFrame").attr("height", $(window).innerHeight() * 0.8);
     openProject($("#projectFrame").attr("name"));
     console.log("it's loaded!!!!!");

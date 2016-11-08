@@ -22,7 +22,7 @@
                 <!-- TEMPLATE -->
                 {{#each avatars.rewards}} {{#ifCond level '<=' ../profile.level}}
                 <li>
-                    <img src="{{name}}" />
+                    <img src="{{name}}">
 
                     <div class="buttons-wrapper">
                         <button type="button" class="btn goal-button" onclick="setGoal({{json name}})">set avatar</button>
@@ -48,12 +48,14 @@
         $("#navbar").load("/nav");
 
         function setGoal(name) {
-            alert("You have set " + name + " as your avatar! ");
+            name = "/" + name;
+            alert("You have set a new avatar!");
             $.post(' /setGoal ', {
                 reward: name
             });
+            $("#profileImg").attr('src', name);
         }
-
+        
     </script>
 </body>
 

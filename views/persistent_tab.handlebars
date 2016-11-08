@@ -6,31 +6,40 @@
             <li><a class="navbtn" href="/home" border="none">Home</a></li>
             <li><a class="navbtn"  href="/earn">Earn</a></li>
             <li><a class="navbtn"  href="/redeem">Redeem</a></li>
-            <li>
-                    <button class="btnarea dropdown navbtn" disabled>
+            <li style="color:#4CAF50;">
+                    <!--button class="btnarea dropdown navbtn" disabled-->
                         
                         EXP
-                        <p class=" dropdown " id="pointText" onclick="redeemFunction()" disabled>
+                        <p style="display: inline-block;color:#4CAF50" id="pointText" onclick="redeemFunction()" disabled>
                             {{score}}
                         </p>
                         /
-                        <p class=" dropdown " id="nextLevelExpText" onclick="redeemFunction()" disabled>
+                        <p style="display: inline-block; color:#4CAF50" id="nextLevelExpText" onclick="redeemFunction()" disabled>
                         {{nextLevelExp}}
                         </p>
                         <div class="progress bar-con">
-                        <div class="bar" id="navProgressBar" data-percent="0"></div>
+                            <div class="bar" id="navProgressBar" data-percent="0"></div>
                         </div>
-                    </button>
+                    <!-- /button -->
 
                     <div id="redeemDropDown" class="dropdown-content">
                         <a href="/redeem" align="center">Redeem</a>
                     </div>
             </li>
             <li>
+                <img id="profileImg" src="{{reward}}" style="width: 50px; height: 50px; object-fit: cover;">
                 <button class="btnarea dropdown dropbtn" onclick="myFunction()">                   
                     Welcome, {{name}}
                 </button>
-          
+                <div style="background-color:#9370DB; color:#FFF; padding-top:5px;">
+                    <p style="display: inline-block; vertical-align:middle;">
+                        Level 
+                    </p>
+                    <p style="display: inline-block; vertical-align:middle;" id="currentLevelText" onclick="redeemFunction()">
+                        {{level}}
+                    </p>
+                </div>
+            
                 <div id="myDropdown" class="dropdown-content">
                     <a href="/" align="center">Sign Out</a>
                 </div>
@@ -88,7 +97,7 @@
         $(".progress .bar").progress();
     }
     loadNavProgress();
-    setInterval(loadNavProgress, 1000);
+    setInterval(loadNavProgress, 500);
     
     
     // Close the dropdown menu if the user clicks outside of it

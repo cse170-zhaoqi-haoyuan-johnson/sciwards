@@ -6,7 +6,7 @@ body
     font-family: Arial; 
     font-size: 16px; 
     background-color: #F1F1F1; 
-    height: 2000px; 
+    /*height: 2000px; */
 }
 
 #nav
@@ -17,13 +17,16 @@ body
     top: 0; 
     z-index: 1;
     opacity: .95;
+    margin:auto;
 }
 
 #nav-wrapper
 { 
-    width: 960px; 
-    margin: 0 auto; 
-    text-align: left; 
+    padding-left: 90px;
+    width: 1200px; 
+    margin: auto; 
+    text-align: left;
+    
 }
 
 #nav ul
@@ -36,7 +39,7 @@ body
 
 #nav ul li
 { 
-    display: table-cell;
+    display:table-cell;
     text-align: center;
     width: 20%;
     height: 100%;
@@ -45,7 +48,6 @@ body
 #nav ul button
 { 
     display: table-cell;
-
     
 }
 #nav ul a:hover
@@ -64,7 +66,7 @@ body
 {
     color: #CCC; 
     display: block; 
-    padding: 15px; 
+    height:150%;
     text-decoration: none; 
 }
 
@@ -89,10 +91,12 @@ body
 .navbtn {
     background-color: #222;
     color: #4CAF50;
-    padding: 16px;
+    padding-bottom: 50px;
+    padding-top:16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
+    vertical-align: middle;
 }
 
 /* Dropdown Button */
@@ -100,6 +104,7 @@ body
     background-color: #4CAF50;
     color: white;
     padding: 16px;
+    margin-left: 0;
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -185,6 +190,7 @@ body
               margin-bottom: 1em;
             }
             .bar {
+              
               float: left;
               height: 100%;
               width: 0%;
@@ -200,5 +206,7 @@ body
             
             
             .progress {
+                margin: auto;
                 border-radius: 5px;
+                width: 80%;
             }

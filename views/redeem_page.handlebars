@@ -20,15 +20,12 @@
         <div class="products-wrapper">
             <ul class="products">
                 <!-- TEMPLATE -->
-                {{#each avatars.rewards}}
-                {{#ifCond price '<=' ../profile.level}}
+                {{#each avatars.rewards}} {{#ifCond price '<=' ../profile.level}}
                 <li>
                     <img src="{{image}}" />
-                    <h3>{{price}} points</h3>
-                    <h3>{{name}}</h3>
-                    <p>{{description}}</p>
+
                     <div class="buttons-wrapper">
-                        <button type="button" class="btn goal-button" onclick="setGoal({{json name}}, {{json price}})">set avatar</button>
+                        <button type="button" class="btn goal-button" onclick="setGoal({{json name}})">set avatar</button>
                     </div>
                     </li>
                {{/ifCond}}{{/each}}
@@ -50,28 +47,9 @@
     <script>
         $("#navbar").load("/nav");
 
-        function redeem(name, price) {
-            var currPointCount = parseInt($("#pointText").text());
-            // insufficient funds
-            if (currPointCount < price) {
-                alert("We're sorry, you do not have enough points to redeem this prize yet. Keep earning! ")
-            } else {
-                // confirm redemption
-                if (confirm("Are you sure you want to redeem \ "" + name + "\" for " + price + " points? ")) {
-
-                    // backend remove points
-                    currPointCount -= price;
-                    $("#pointText ").text(currPointCount);
-                    alert("Congrats, \ "" + name + "\" has been redeemed! you have " + currPointCount + " points remaining. ");
-                } else {
-
-                }
-            }
-        }
-
-        function setGoal(name, price) {
+        function setGoal(name) {
             alert("You have set " + name + " as your avatar! ");
-            $.post('/setGoal', {
+            $.post(' /setGoal ', {
                 reward: name
             });
         }

@@ -3,19 +3,19 @@
         {
             "name": "Kitty",
             "image": "Images/ProductImages/kitty.jpg",
-            "price": 100,
+            "price": 0,
             "description": "A cute cat"
         },
         {
             "name": "Puppy",
             "image": "Images/ProductImages/puppyA.jpg",
-            "price": 200,
+            "price": 0,
             "description": "A cute puppy"
         },
         {
             "name": "Bicyle",
             "image": "Images/ProductImages/bicycleA.jpg",
-            "price": 30,
+            "price": 0,
             "description": "A cool bicycle"
         },
         {

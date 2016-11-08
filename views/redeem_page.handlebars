@@ -3,7 +3,8 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        
+
+
     </script>
     <title>
         SciWards
@@ -19,19 +20,19 @@
         <div class="products-wrapper">
             <ul class="products">
                 <!-- TEMPLATE -->
-                {{#each rewards}}
+                {{#each avatars.rewards}}
+                {{#ifCond price '<=' ../profile.level}}
                 <li>
-                    <img src="{{image}}"/>
+                    <img src="{{image}}" />
                     <h3>{{price}} points</h3>
                     <h3>{{name}}</h3>
                     <p>{{description}}</p>
                     <div class="buttons-wrapper">
-                        <button type="button" class="btn redeem-button" onclick="redeem({{json name}}, {{json price}})">redeem</button>
-                        <button type="button" class="btn goal-button" onclick="setGoal({{json name}}, {{json price}})">set goal</button>
+                        <button type="button" class="btn goal-button" onclick="setGoal({{json name}}, {{json price}})">set avatar</button>
                     </div>
-                </li>
-                {{/each}}
-                <!--
+                    </li>
+               {{/ifCond}}{{/each}}
+                    <!--
                 <li>
                     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg" />
                     <h3>Kitty</h3>
@@ -47,39 +48,34 @@
     </div>
     <!-- Load Navbar -->
     <script>
-
         $("#navbar").load("/nav");
-        function redeem(name, price)
-        {
+
+        function redeem(name, price) {
             var currPointCount = parseInt($("#pointText").text());
             // insufficient funds
-            if (currPointCount < price)
-                {
-                    alert("We're sorry, you do not have enough points to redeem this prize yet. Keep earning!")
-                }
-            else
-            {
+            if (currPointCount < price) {
+                alert("We're sorry, you do not have enough points to redeem this prize yet. Keep earning! ")
+            } else {
                 // confirm redemption
-                if (confirm("Are you sure you want to redeem \"" + name + "\" for " + price + " points?"))
-                {
-                        
-                        // backend remove points
-                        $.post('/subPoint',{price: price});
-                        currPointCount -= price;
-                        $("#pointText").text(currPointCount);
-                        alert("Congrats, \"" + name + "\" has been redeemed! you have " + currPointCount + " points remaining.");
-                }
-                else
-                {
-                    
+                if (confirm("Are you sure you want to redeem \ "" + name + "\" for " + price + " points? ")) {
+
+                    // backend remove points
+                    currPointCount -= price;
+                    $("#pointText ").text(currPointCount);
+                    alert("Congrats, \ "" + name + "\" has been redeemed! you have " + currPointCount + " points remaining. ");
+                } else {
+
                 }
             }
         }
-        function setGoal(name, price)
-        {
-            alert("You have set " + name + " as your avatar!");
-            $.post('/setGoal',{reward:name});
+
+        function setGoal(name, price) {
+            alert("You have set " + name + " as your avatar! ");
+            $.post('/setGoal', {
+                reward: name
+            });
         }
+
     </script>
 </body>
 

@@ -3,6 +3,15 @@
     padding: 0;
 }
 
+.credit {
+    width: 100%;
+    margin: 15px;
+}
+
+.credit p {
+    text-align: center;
+}
+
 .products-wrapper {
     padding: 15px;
 }

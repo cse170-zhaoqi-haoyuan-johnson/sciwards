@@ -52,7 +52,6 @@
         $("#navbar").load("/nav");
 
         function setGoal(name) {
-            name = "/" + name;
             alert("You have set a new avatar!");
             $.post(' /setGoal ', {
                 reward: name

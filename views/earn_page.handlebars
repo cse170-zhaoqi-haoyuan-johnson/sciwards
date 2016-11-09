@@ -23,9 +23,10 @@
         <div onmouseenter="entered()" onmouseleave="exited()">
             <iframe id="projectFrame" name={{projectName}} width=98% height=98%></iframe>
         </div>
-        <h1 id="selectProjectPrompt" align="center" visible="false">Please Select a Project!</h1>
-
-
+        {{#unless projectName}}
+            <h1 id="selectProjectPrompt" align="center" visible="false">Please Select a Project!</h1>
+        {{/unless}}
+        
     </div>
 </body>
 <script>
@@ -86,7 +87,7 @@
                     var currentLevel = parseInt($("#currentLevelText").text());
                     currentLevel++;
                     $("#currentLevelText").text(currentLevel);
-                    window.alert("Wooo! You leveled up to Level " + $("#currentLevelText").text());
+                    window.alert("Wooo! You leveled up to Level " + $("#currentLevelText").text() + ". Check out your new Avatars!");
             }
             else
             {
@@ -104,13 +105,17 @@
     function openProject(projectName) {
         if (projectName == "EyeWire") {
             $("#projectFrame").attr("src", "http://eyewire.org/");
+            $("#selectProjectPrompt").attr("visible", "false");
 
         } else if (projectName == "eterna") {
             $("#projectFrame").attr("src", "http://www.eternagame.org/web/");
+            $("#selectProjectPrompt").attr("visible", "false");
         } else if (projectName == "PHYLO") {
             $("#projectFrame").attr("src", "http://phylo.cs.mcgill.ca");
+            $("#selectProjectPrompt").attr("visible", "false");
         } else if (projectName == "nightjar") {
             $("#projectFrame").attr("src", "http://nightjar.exeter.ac.uk/where-is-that-nightjar/");
+            $("#selectProjectPrompt").attr("visible", "false");
         } else {
             //$("#projectFrame").attr("height", "0");
             //$("#projectFrame").attr("width", "0");

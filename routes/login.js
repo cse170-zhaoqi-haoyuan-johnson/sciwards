@@ -19,7 +19,7 @@ exports.post = function (req, res, next) {
                             name: req.body.username,
                             score: 0,
                             level: 1,
-                            reward: "",
+                            reward: "/Images/Avatars/avatar_1.png",
                             nextLevelExp: 15
                         });
                         var json = JSON.stringify(obj);

@@ -4,47 +4,47 @@
     <div id="nav-wrapper">
         <ul>
             <li><a class="navbtn" href="/home" border="none">Home</a></li>
-            <li><a class="navbtn"  href="/earn">Earn</a></li>
-            <li><a class="navbtn"  href="/redeem">Redeem</a></li>
+            <li><a class="navbtn" href="/earn">Earn</a></li>
+            <li><a class="navbtn" href="/redeem">Redeem</a></li>
             <li style="color:#4CAF50;">
-                    <!--button class="btnarea dropdown navbtn" disabled-->
-                        
-                        EXP
-                        <p style="display: inline-block;color:#4CAF50" id="pointText" onclick="redeemFunction()" disabled>
-                            {{score}}
-                        </p>
-                        /
-                        <p style="display: inline-block; color:#4CAF50" id="nextLevelExpText" onclick="redeemFunction()" disabled>
-                        {{nextLevelExp}}
-                        </p>
-                        <div class="progress bar-con">
-                            <div class="bar" id="navProgressBar" data-percent="0"></div>
-                        </div>
-                    <!-- /button -->
+                <!--button class="btnarea dropdown navbtn" disabled-->
 
-                    <div id="redeemDropDown" class="dropdown-content">
-                        <a href="/redeem" align="center">Redeem</a>
-                    </div>
+                EXP
+                <p style="display: inline-block;color:#4CAF50" id="pointText" onclick="redeemFunction()" disabled>
+                    {{score}}
+                </p>
+                /
+                <p style="display: inline-block; color:#4CAF50" id="nextLevelExpText" onclick="redeemFunction()" disabled>
+                    {{nextLevelExp}}
+                </p>
+                <div class="progress bar-con">
+                    <div class="bar" id="navProgressBar" data-percent="0"></div>
+                </div>
+                <!-- /button -->
+
+                <div id="redeemDropDown" class="dropdown-content">
+                    <a href="/redeem" align="center">Redeem</a>
+                </div>
             </li>
             <li>
                 <img id="profileImg" src="{{reward}}" style="width: 50; height: 50px; object-fit: cover;">
-                <button class="btnarea dropdown dropbtn" onclick="myFunction()">                   
+                <button class="btnarea dropdown dropbtn" onclick="myFunction()">
                     Welcome, {{name}}
                 </button>
                 <div style="background-color:#9370DB; color:#FFF; padding-top:5px;">
                     <p style="display: inline-block; vertical-align:middle;">
-                        Level 
+                        Level
                     </p>
                     <p style="display: inline-block; vertical-align:middle;" id="currentLevelText" onclick="redeemFunction()">
                         {{level}}
                     </p>
                 </div>
-            
+
                 <div id="myDropdown" class="dropdown-content">
                     <a href="/" align="center">Sign Out</a>
                 </div>
             </li>
-            
+
         </ul>
     </div>
 </div>
@@ -63,27 +63,27 @@
     }(jQuery));
 
     $(document).ready(function() {
-        
-        
+
+
     });
     /* When the user clicks on the button, 
      */
     function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
     }
+
     function redeemFunction() {
         document.getElementById("redeemDropdown").classList.toggle("show");
     }
-    
+
     function calcNavPercent(total, req) {
-        if(total > req) {
+        if (total > req) {
             return 100;
-        }
-        else { 
-            return (total/req*100);
+        } else {
+            return (total / req * 100);
         }
     }
-    
+
     function loadNavProgress() {
         //console.log("nextLevelExp " + nextLevelExp);
         var totalPoints = parseInt($("#pointText").text());
@@ -98,8 +98,8 @@
     }
     loadNavProgress();
     setInterval(loadNavProgress, 500);
-    
-    
+
+
     // Close the dropdown menu if the user clicks outside of it
     /*
     window.onclick = function(event) {

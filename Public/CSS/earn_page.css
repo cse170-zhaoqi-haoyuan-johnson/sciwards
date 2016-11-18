@@ -102,8 +102,10 @@ body {
     background: -o-linear-gradient(#fff, #999);
 }
 .close {
-    background: #606061;
+    /*background: #606061;*/
+    background: #FFF;
     color: #FFFFFF;
+    opacity: .7 !important;
     line-height: 25px;
     position: absolute;
     right: -12px;

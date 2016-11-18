@@ -1,8 +1,6 @@
 .container {
-    padding-top: 75px;
 }
-#project-title {
-    text-decoration: underline;
+#project-title {  
 }
 ul.projects {
     list-style: none;

@@ -18,15 +18,24 @@
 <body height=100%>
     <div id="main">
         <!-- Use any element to open the sidenav -->
-        <button id="selectProjectButton" onclick="openNav()">Select Project</button>
-        <button id="finishedButton" onclick="taskFinished()">Finished My Task!</button>
+        <button id="selectProjectButton" class="btn btn-info" onclick="openNav()">Select Project</button>
+        <button id="finishedButton" class="btn btn-info" onclick="taskFinished()">Finished My Task!</button>
+        <a id="right" href="#openModal" class="btn btn-info" role="button">Help</a>
+
+        <div id="openModal" class="modalDialog">
+            <div>
+                <a href="#close" title="Close" class="close">X</a>
+                <h2>Help</h2>
+                <p>Select a project by clicking the button to the left. When you have completed the task, press the "Finished My Task" button to be rewarded your points.</p>
+                <p></p>
+            </div>
+        </div>
         <div onmouseenter="entered()" onmouseleave="exited()">
             <iframe id="projectFrame" name={{projectName}} width=98% height=98%></iframe>
         </div>
         {{#unless projectName}}
-            <h1 id="selectProjectPrompt" align="center" visible="false">Please Select a Project!</h1>
-        {{/unless}}
-        
+        <h1 id="selectProjectPrompt" align="center" visible="false">Please Select a Project!</h1> {{/unless}}
+
     </div>
 </body>
 <script>
@@ -36,6 +45,7 @@
     var tempTime = 0;
     var interval_js_id;
     $("#navbar").load("/nav");
+
     function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
         document.getElementById("main").style.marginLeft = "250px";
@@ -65,40 +75,40 @@
         if (tempTime < REQUIRED_USAGE_TIME) {
             window.alert("You have not spent enough time on the task. Please complete the task.");
         } else {
-            window.alert("Congrats! You got " + Math.ceil(Math.sqrt(tempTime/1000)) + " exp!");
+            window.alert("Congrats! You got " + Math.ceil(Math.sqrt(tempTime / 1000)) + " exp!");
             var str = $("#pointText").text();
             console.log(str);
             var points = parseInt(str);
             console.log(points);
-            points += Math.ceil(Math.sqrt(tempTime/1000));
+            points += Math.ceil(Math.sqrt(tempTime / 1000));
             console.log(nextLevelExp);
             // level up!
-            if (points >= nextLevelExp)
-            {
-                    
-                    points %= nextLevelExp;
-                    
-                    nextLevelExp *= 1.5;
-                    nextLevelExp = Math.ceil(nextLevelExp);
-                    $.post("/levelUp", {point: points, updatedNextLevelExp: nextLevelExp});
-                    $("#pointText").text(points);
-                    $("#nextLevelExpText").text(nextLevelExp);
-                
-                    var currentLevel = parseInt($("#currentLevelText").text());
-                    currentLevel++;
-                    $("#currentLevelText").text(currentLevel);
-                    window.alert("Wooo! You leveled up to Level " + $("#currentLevelText").text() + ". Check out your new Avatars!");
-            }
-            else
-            {
-            $("#pointText").text(points);
+            if (points >= nextLevelExp) {
+
+                points %= nextLevelExp;
+
+                nextLevelExp *= 1.5;
+                nextLevelExp = Math.ceil(nextLevelExp);
+                $.post("/levelUp", {
+                    point: points,
+                    updatedNextLevelExp: nextLevelExp
+                });
+                $("#pointText").text(points);
+                $("#nextLevelExpText").text(nextLevelExp);
+
+                var currentLevel = parseInt($("#currentLevelText").text());
+                currentLevel++;
+                $("#currentLevelText").text(currentLevel);
+                window.alert("Wooo! You leveled up to Level " + $("#currentLevelText").text() + ". Check out your new Avatars!");
+            } else {
+                $("#pointText").text(points);
                 console.log("points " + points);
-            $.post("/point", {
-                point: points
-            });
+                $.post("/point", {
+                    point: points
+                });
             }
             //location.reload(true);
-            tempTime =0;
+            tempTime = 0;
         }
     }
 
@@ -136,15 +146,13 @@
     }
 
 
-    window.onscroll = function() {
+    /*window.onscroll = function() {
         window.scrollTo(0, 0);
-    }
-    
+    }*/
+
     $("#projectFrame").attr("height", $(window).innerHeight() * 0.8);
     openProject($("#projectFrame").attr("name"));
     console.log("it's loaded!!!!!");
-    
-    
 
 </script>
 

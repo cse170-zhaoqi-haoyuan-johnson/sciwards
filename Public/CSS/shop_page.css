@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.credit {
+    width: 100%;
+    margin: 15px;
+}
+
+.credit p {
+    text-align: center;
+}
+
+.products-wrapper {
+    padding: 15px;
+}
+
+ul.products {
+    list-style: none;
+    font-size: 0px;
+    margin-left: -2.5%; 
+    /* should match li left margin
+    */
+}
+ul.products li {
+    display: inline-block;
+    padding: 10px;
+    margin: 0 0 2.5% 2.5%;
+    background: #fff;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    font-size: 1rem;
+    vertical-align: top;
+    box-shadow: 0 0 5px #ddd;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 17.5%; /* default 5 columns */
+}
+
+ul.products li img {
+	max-width: 100%;
+	height: auto;
+	margin: 0 0 10px;
+}
+
+.buttons-wrapper {
+    margin: auto;
+    width: 100%;
+}
+
+.btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: .7em .2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    font-variant: small-caps;
+    margin-left: 2%;
+    width: 46%;
+    -webkit-transition-duration: 0.5    s; /* Safari */
+    transition-duration: 0.8s;
+    cursor: pointer;
+}
+
+.redeem-button, .goal-button {
+}
+
+.redeem-button:hover, .goal-button:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* class for 2 columns */
+ul.products.columns-2 li {
+    width: 47.5%; /* this value + 2.5 should = 50% */
+}
+/* class for 3 columns */
+ul.products.columns-3 li {
+    width: 30.83%; /* this value + 2.5 should = 33% */
+}
+/* class for 4 columns */
+ul.products.columns-4 li {
+    width: 22.5%; /* this value + 2.5 should = 25% */
+}
+
+ul.products.columns-5 li {
+    width: 17.5%;
+}
+
+@media (max-width: 760px) {
+     ul.products li {
+        width: 30.83% !important; /* over-ride all li styles */
+    }
+}
+
+@media (max-width: 480px) {
+    ul.grid-nav li {
+        display: block;
+        margin: 0 0 5px;
+    }
+    ul.grid-nav li a {
+        display: block;
+    }
+    ul.products {
+        margin-left: 0;
+    }
+    ul.products li {
+        width: 100% !important; /* over-ride all li styles */
+        margin: 0 0 20px;
+    }
+}

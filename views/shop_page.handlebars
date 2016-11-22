@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+
+
+    </script>
+    <title>
+        SciWards
+    </title>
+    <div id="navbar"></div>
+    <link rel="stylesheet" href="/CSS/shop_page.css">
+</head>
+
+<body>
+    <div class="container">
+       
+        <h2>Shop</h2>
+        <div class="products-wrapper">
+            <ul class="products">
+                <!-- TEMPLATE -->
+
+                {{#each avatars.rewards}} {{#ifCond level '<=' ../profile.level}}
+                <li>
+                    <img src="{{name}}">
+
+                    <div class="buttons-wrapper">
+                        <button type="button" class="btn goal-button" onclick="setGoal({{json name}})">set avatar</button>
+                    </div>
+                    </li>
+                {{/ifCond}}{{/each}}
+
+                <li>
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg" />
+                    <h3>Kitty</h3>
+                    <p>A cute cat.</p>
+                    <p id="price">5000</p>
+                    <div class="buttons-wrapper">
+                        <button type="button" class="btn redeem-button">Buy</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+         <div class="credit">
+            <p>
+                Pokemon and their repspective images are trademarks and copyrights of their respective owners. No copyright or trademark infringment is intended.
+            </p>
+        </div>
+    </div>
+    <!-- Load Navbar -->
+    <script>
+        $("#navbar").load("/nav");
+
+        function setGoal(name) {
+            alert("You have set a new avatar!");
+            $.post(' /setGoal ', {
+                reward: name
+            });
+            $("#profileImg").attr('src', name);
+        }
+        
+    </script>
+</body>
+
+</html>

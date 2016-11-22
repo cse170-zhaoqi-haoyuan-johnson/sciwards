@@ -9,13 +9,17 @@ exports.view = function (req, res) {
             jdata.table.sort(function (a, b) {
                 return parseFloat(b.netWorth) - parseFloat(a.netWorth);
             });
-            res.render('leaderboard_page', jdata);
+            var newData = {
+                name: req.session.name,
+                jdata
+            }
+            res.render('leaderboard_page', newData);
         }
     });
 }
 exports.buy = function (req, res) {
-    var gold = req.body.something;
-    var url = req.body.url;
+    var gold = req.body.price;
+    var url = req.body.image;
     fs.readFile('data/data.json', function readFileCallback(err, data) {
         if (err) {
             console.log(err);

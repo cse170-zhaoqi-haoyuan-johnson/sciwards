@@ -3,8 +3,6 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-
-
     </script>
     <title>
         SciWards
@@ -15,21 +13,22 @@
 
 <body>
     <div class="container">
-       
+
         <h2>Shop</h2>
         <div class="products-wrapper">
             <ul class="products">
                 <!-- TEMPLATE -->
 
-                {{#each avatars.rewards}} {{#ifCond level '<=' ../profile.level}}
+                {{#each pokemons}}
                 <li>
-                    <img src="{{name}}">
-
+                    <img src="{{image}}" />
+                    <h3>{{name}}</h3>
+                    <p id="price">{{price}}</p>
                     <div class="buttons-wrapper">
-                        <button type="button" class="btn goal-button" onclick="setGoal({{json name}})">set avatar</button>
+                        <button type="button" class="btn redeem-button" onclick="buy({{json name}}, {{json image}}, {{json price}})">Buy</button>
                     </div>
-                    </li>
-                {{/ifCond}}{{/each}}
+                </li>
+                {{/each}}
 
                 <li>
                     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg" />
@@ -42,7 +41,7 @@
                 </li>
             </ul>
         </div>
-         <div class="credit">
+        <div class="credit">
             <p>
                 Pokemon and their repspective images are trademarks and copyrights of their respective owners. No copyright or trademark infringment is intended.
             </p>
@@ -59,7 +58,26 @@
             });
             $("#profileImg").attr('src', name);
         }
-        
+
+        function buy(name, image, price) {
+            currGold = parseInt($("#currentGoldText").text());
+            price = parseInt(price);
+            remaining = currGold - price;
+            if (remaining < 0) {
+                alert("Sorry, you do not have enough Gold to buy " + name + ". Finish some more tasks!");
+            } else {
+                if (confirm("Buy " + name + " for " + price + " Gold? You will have " + remaining + " Gold left.")) {
+                    $.post("/buy", {
+                        price: price,
+                        image: image
+                    });
+                    $("#currentGoldText").text(remaining);
+                    alert("Congrats! You have successfully bought " + name + ". You have " + remaining + " Gold left.");
+                } else {
+
+                }
+            }
+        }
     </script>
 </body>
 

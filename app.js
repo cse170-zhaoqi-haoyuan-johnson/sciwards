@@ -11,8 +11,11 @@ var earn = require('./routes/earn');
 var home = require('./routes/home');
 var redeem = require('./routes/redeem');
 var login = require('./routes/login');
-var leaderboard = require('./routes/leaderboard');
-var profile = require('./routes/profile');
+var leaderboard = require('./routes/leaderboard'); << << << < HEAD
+var profile = require('./routes/profile'); === === =
+var shop = require('./routes/shop');
+
+>>> >>> > 764 b139e5d46fa8306955eee88f4974220614024
 
 // Example route
 // var user = require('./routes/user');
@@ -99,6 +102,7 @@ app.get('/home', home.view);
 app.get('/redeem', redeem.view);
 app.get('/leaderboard', leaderboard.view);
 app.get('/profile', profile.view);
+app.get('/shop', shop.view);
 
 app.post('/levelUp', redeem.levelUp);
 app.post('/setGoal', redeem.setGoal);

@@ -1,28 +1,8 @@
 var fs = require('fs');
-var rewards = require('../data/rewards1.json');
+var shop = require('../data/shop.json');
 exports.view = function (req, res) {
     console.log("loading the nav bar");
-    fs.readFile('data/data.json', function readFileCallback(err, data) {
-        if (err) {
-            console.log(err);
-        } else {
-            var obj = JSON.parse(data);
-            console.log(req.body.price);
-            var profile;
-            for (var i = 0; i < obj.table.length; i++) {
-                if (req.session.name == obj.table[i].name) {
-                    profile = obj.table[i];
-                }
-            }
-            var json = {
-                avatars:rewards,
-                profile
-            };
-            console.log(json);
-            res.render('redeem_page', json);
-
-        }
-    });
+    res.render('shop_page', shop);
 }
 
 exports.levelUp = function (req, res, next) {

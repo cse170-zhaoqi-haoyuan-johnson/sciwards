@@ -16,20 +16,21 @@
             <th>Name</th>
             <th>Items Owned</th>
         </tr>
-        {{#each data.table}}
-            <p>{{this}}</p>
-        {{/each}}
-        {{#each table}}
-        <tr>
+        {{#each jdata.table}}
+        {{#ifCond ../name '==' name}}
+            <tr class="success">
+        {{else}}
+            <tr>
+        {{/ifCond}}
             <td>{{increment @index}}</td>
             <td>
-                <img class="avatar" src="{{reward}}">
+                <img class="avatar" src="{{reward}}" style="object-fit: cover;">
                 {{name}}
             </td>
             <td>
                 <div>
                     {{#each items}}
-                    <img class="item" src="{{this}}">
+                    <img class="item" src="{{this}}" style="object-fit: cover;">
                     {{/each}}
                 </div>
             </td>

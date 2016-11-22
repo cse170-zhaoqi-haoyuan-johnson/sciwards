@@ -2,752 +2,752 @@
     "pokemons": [
         {
             "image": "/Images/ShopImages/pokemon_001.jpg",
-            "name": "poke",
+            "name": "Bulbasaur",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_002.jpg",
-            "name": "poke",
+            "name": "Ivysaur",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_003.jpg",
-            "name": "poke",
+            "name": "Venusaur",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_004.jpg",
-            "name": "poke",
+            "name": "Charmander",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_005.jpg",
-            "name": "poke",
+            "name": "Charmeleon",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_006.jpg",
-            "name": "poke",
+            "name": "Charizard",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_007.jpg",
-            "name": "poke",
+            "name": "Squirtle",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_008.jpg",
-            "name": "poke",
+            "name": "Wartortle",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_009.jpg",
-            "name": "poke",
+            "name": "Blastoise",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_010.jpg",
-            "name": "poke",
+            "name": "Caterpie",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_011.jpg",
-            "name": "poke",
+            "name": "Metapod",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_012.jpg",
-            "name": "poke",
+            "name": "Electrode",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_013.jpg",
-            "name": "poke",
+            "name": "Exegcute",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_014.jpg",
-            "name": "poke",
+            "name": "Exeggutor",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_015.jpg",
-            "name": "poke",
+            "name": "Cubone",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_016.jpg",
-            "name": "poke",
+            "name": "Marowak",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_017.jpg",
-            "name": "poke",
+            "name": "Hitmonlee",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_018.jpg",
-            "name": "poke",
+            "name": "Hitmonchan",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_019.jpg",
-            "name": "poke",
+            "name": "Lickitung",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_020.jpg",
-            "name": "poke",
+            "name": "Koffing",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_021.jpg",
-            "name": "poke",
+            "name": "Weezing",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_022.jpg",
-            "name": "poke",
+            "name": "Butterfree",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_023.jpg",
-            "name": "poke",
+            "name": "Rhyhorn",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_024.jpg",
-            "name": "poke",
+            "name": "Rhydon",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_025.jpg",
-            "name": "poke",
+            "name": "Chansey",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_026.jpg",
-            "name": "poke",
+            "name": "Tangela",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_027.jpg",
-            "name": "poke",
+            "name": "Kangaskhan",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_028.jpg",
-            "name": "poke",
+            "name": "Horsea",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_029.jpg",
-            "name": "poke",
+            "name": "Seadra",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_030.jpg",
-            "name": "poke",
+            "name": "Goldeen",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_031.jpg",
-            "name": "poke",
+            "name": "Seaking",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_032.jpg",
-            "name": "poke",
+            "name": "Staryu",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_033.jpg",
-            "name": "poke",
+            "name": "Weedle",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_034.jpg",
-            "name": "poke",
+            "name": "Starme",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_035.jpg",
-            "name": "poke",
+            "name": "Mr. Mime",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_036.jpg",
-            "name": "poke",
+            "name": "Scyther",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_037.jpg",
-            "name": "poke",
+            "name": "Jinx",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_038.jpg",
-            "name": "poke",
+            "name": "Electabuzz",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_039.jpg",
-            "name": "poke",
+            "name": "Magmar",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_040.jpg",
-            "name": "poke",
+            "name": "Pinsir",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_041.jpg",
-            "name": "poke",
+            "name": "Tauros",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_042.jpg",
-            "name": "poke",
+            "name": "Magikarp",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_043.jpg",
-            "name": "poke",
+            "name": "Gyrados",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_044.jpg",
-            "name": "poke",
+            "name": "Kakuna",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_045.jpg",
-            "name": "poke",
+            "name": "Lapras",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_046.jpg",
-            "name": "poke",
+            "name": "Ditto",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_047.jpg",
-            "name": "poke",
+            "name": "Eevee",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_048.jpg",
-            "name": "poke",
+            "name": "Vaporeon",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_049.jpg",
-            "name": "poke",
+            "name": "Jolteon",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_050.jpg",
-            "name": "poke",
+            "name": "Flareon",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_051.jpg",
-            "name": "poke",
+            "name": "Porygon",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_052.jpg",
-            "name": "poke",
+            "name": "Omanyte",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_053.jpg",
-            "name": "poke",
+            "name": "Omastar",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_054.jpg",
-            "name": "poke",
+            "name": "Kabuto",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_055.jpg",
-            "name": "poke",
+            "name": "Beedrill",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_056.jpg",
-            "name": "poke",
+            "name": "Kabutops",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_057.jpg",
-            "name": "poke",
+            "name": "Aerodactyl",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_058.jpg",
-            "name": "poke",
+            "name": "Snorlax",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_059.jpg",
-            "name": "poke",
+            "name": "Articuno",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_060.jpg",
-            "name": "poke",
+            "name": "Zaptos",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_061.jpg",
-            "name": "poke",
+            "name": "Moltres",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_062.jpg",
-            "name": "poke",
+            "name": "Dratini",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_063.jpg",
-            "name": "poke",
+            "name": "Dragonair",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_064.jpg",
-            "name": "poke",
+            "name": "Dragonite",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_065.jpg",
-            "name": "poke",
+            "name": "Mewtwo",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_066.jpg",
-            "name": "poke",
+            "name": "Pidgey",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_067.jpg",
-            "name": "poke",
+            "name": "Pidgeotto",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_068.jpg",
-            "name": "poke",
+            "name": "Pidgeot",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_069.jpg",
-            "name": "poke",
+            "name": "Rattata",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_070.jpg",
-            "name": "poke",
+            "name": "Raticate",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_071.jpg",
-            "name": "poke",
+            "name": "Spearow",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_072.jpg",
-            "name": "poke",
+            "name": "Fearow",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_073.jpg",
-            "name": "poke",
+            "name": "Ekans",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_074.jpg",
-            "name": "poke",
+            "name": "Arbok",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_075.jpg",
-            "name": "poke",
+            "name": "Pikachu",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_076.jpg",
-            "name": "poke",
+            "name": "Raichu",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_077.jpg",
-            "name": "poke",
+            "name": "Sandshrew",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_078.jpg",
-            "name": "poke",
+            "name": "Sandslash",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_079.jpg",
-            "name": "poke",
+            "name": "Nidoran",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_080.jpg",
-            "name": "poke",
+            "name": "Nidorina",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_081.jpg",
-            "name": "poke",
+            "name": "Nidoqueen",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_082.jpg",
-            "name": "poke",
+            "name": "Nidoran",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_083.jpg",
-            "name": "poke",
+            "name": "Nidorino",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_084.jpg",
-            "name": "poke",
+            "name": "Nidoking",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_085.jpg",
-            "name": "poke",
+            "name": "Clefairy",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_086.jpg",
-            "name": "poke",
+            "name": "Clefable",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_087.jpg",
-            "name": "poke",
+            "name": "Vulpix",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_088.jpg",
-            "name": "poke",
+            "name": "Ninetails",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_089.jpg",
-            "name": "poke",
+            "name": "Jigglypuff",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_090.jpg",
-            "name": "poke",
+            "name": "Wigglytuff",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_091.jpg",
-            "name": "poke",
+            "name": "Zubat",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_092.jpg",
-            "name": "poke",
+            "name": "Golbat",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_093.jpg",
-            "name": "poke",
+            "name": "Oddish",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_094.jpg",
-            "name": "poke",
+            "name": "Gloom",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_095.jpg",
-            "name": "poke",
+            "name": "Vileplume",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_096.jpg",
-            "name": "poke",
+            "name": "Paras",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_097.jpg",
-            "name": "poke",
+            "name": "Parasect",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_098.jpg",
-            "name": "poke",
+            "name": "Venonat",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_099.jpg",
-            "name": "poke",
+            "name": "Venomoth",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_100.jpg",
-            "name": "poke",
+            "name": "Diglett",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_101.jpg",
-            "name": "poke",
+            "name": "Dugtrio",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_102.jpg",
-            "name": "poke",
+            "name": "Meowth",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_103.jpg",
-            "name": "poke",
+            "name": "Persian",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_104.jpg",
-            "name": "poke",
+            "name": "Psyduck",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_105.jpg",
-            "name": "poke",
+            "name": "Golduck",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_106.jpg",
-            "name": "poke",
+            "name": "Mankey",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_107.jpg",
-            "name": "poke",
+            "name": "Primeape",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_108.jpg",
-            "name": "poke",
+            "name": "Growlithe",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_109.jpg",
-            "name": "poke",
+            "name": "Arcanine",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_110.jpg",
-            "name": "poke",
+            "name": "Polywag",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_111.jpg",
-            "name": "poke",
+            "name": "Polywhirl",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_112.jpg",
-            "name": "poke",
+            "name": "Polywrath",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_113.jpg",
-            "name": "poke",
+            "name": "Abra",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_114.jpg",
-            "name": "poke",
+            "name": "Kadabra",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_115.jpg",
-            "name": "poke",
+            "name": "Alakazam",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_116.jpg",
-            "name": "poke",
+            "name": "Machop",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_117.jpg",
-            "name": "poke",
+            "name": "Machoke",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_118.jpg",
-            "name": "poke",
+            "name": "Machamp",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_119.jpg",
-            "name": "poke",
+            "name": "Bellsprout",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_120.jpg",
-            "name": "poke",
+            "name": "Weepinbell",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_121.jpg",
-            "name": "poke",
+            "name": "Victreebel",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_122.jpg",
-            "name": "poke",
+            "name": "Tentacool",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_123.jpg",
-            "name": "poke",
+            "name": "Tentacruel",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_124.jpg",
-            "name": "poke",
+            "name": "Geodude",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_125.jpg",
-            "name": "poke",
+            "name": "Graveler",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_126.jpg",
-            "name": "poke",
+            "name": "Golem",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_127.jpg",
-            "name": "poke",
+            "name": "Ponyta",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_128.jpg",
-            "name": "poke",
+            "name": "Rapidash",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_129.jpg",
-            "name": "poke",
+            "name": "Slowpoke",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_130.jpg",
-            "name": "poke",
+            "name": "Slowbro",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_131.jpg",
-            "name": "poke",
+            "name": "Magnemite",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_132.jpg",
-            "name": "poke",
+            "name": "Magneton",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_133.jpg",
-            "name": "poke",
+            "name": "Farfetch'd",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_134.jpg",
-            "name": "poke",
+            "name": "Doduo",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_135.jpg",
-            "name": "poke",
+            "name": "Dodrio",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_136.jpg",
-            "name": "poke",
+            "name": "Seel",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_137.jpg",
-            "name": "poke",
+            "name": "Dewgong",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_138.jpg",
-            "name": "poke",
+            "name": "Grimer",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_139.jpg",
-            "name": "poke",
+            "name": "Muk",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_140.jpg",
-            "name": "poke",
+            "name": "Shellder",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_141.jpg",
-            "name": "poke",
+            "name": "Cloyster",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_142.jpg",
-            "name": "poke",
+            "name": "Gastly",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_143.jpg",
-            "name": "poke",
+            "name": "Haunter",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_144.jpg",
-            "name": "poke",
+            "name": "Gengar",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_145.jpg",
-            "name": "poke",
+            "name": "Onyx",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_146.jpg",
-            "name": "poke",
+            "name": "Drowzee",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_147.jpg",
-            "name": "poke",
+            "name": "Hypno",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_148.jpg",
-            "name": "poke",
+            "name": "Krabby",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_149.jpg",
-            "name": "poke",
+            "name": "Kingler",
             "price": "100"
         }
         , {
             "image": "/Images/ShopImages/pokemon_150.jpg",
-            "name": "poke",
+            "name": "Voltorb",
             "price": "100"
         }
     ]

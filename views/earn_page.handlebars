@@ -39,6 +39,23 @@
     </div>
 </body>
 <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-87939402-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<script>
     const UPDATE_INTERVAL = 300;
     const REQUIRED_USAGE_TIME = 100; //in ms
     var nextLevelExp = '{{{userData.nextLevelExp}}}';
@@ -83,7 +100,7 @@
             var currentLevel = parseInt($("#currentLevelText").text());
             var currGold = parseInt($("#currentGoldText").text());
             var gold = currentLevel * Math.ceil(Math.sqrt(tempTime / 1000));
-            currGold += gold; 
+            currGold += gold;
             window.alert("Congrats! You got " + Math.ceil(Math.sqrt(tempTime / 1000)) + " exp and " + currentLevel * Math.ceil(Math.sqrt(tempTime / 1000)) + " Gold!");
             console.log("GOLD: " + gold + '\n');
             console.log(nextLevelExp);
@@ -140,7 +157,7 @@
             $("#selectProjectPrompt").attr("visible", "true");
             console.log("empty");
         }
-
+        ga('send', 'event', 'changeProjectOG', 'click');
 
         closeNav();
     }

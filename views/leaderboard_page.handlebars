@@ -1,9 +1,9 @@
 <html>
-    
+
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/CSS/leaderboard_page.css">
     <!-- Load Navbar -->
     <div id="navbar"></div>
@@ -16,34 +16,38 @@
             <th>Name</th>
             <th>Items Owned</th>
         </tr>
-        {{#each jdata.table}}
-        {{#ifCond ../name '==' name}}
-            <tr class="success">
-        {{else}}
+        {{#each jdata.table}} {{#ifCond ../name '==' name}}
+        <tr class="success">
+            {{else}}
             <tr>
-        {{/ifCond}}
-            <td style="text-align: right">{{increment @index}}</td>
-            <td>
-                <img class="avatar" src="{{reward}}" style="object-fit: cover;">
-                {{name}}
-            </td>
-            <td>
-                <div>
-                    {{#each items}}
-                    <img class="item" src="{{this}}" style="object-fit: cover;">
-                    {{/each}}
-                </div>
-            </td>
-        </tr>
-        {{/each}}
+                {{/ifCond}}
+                <td style="text-align: right">{{increment @index}}</td>
+                <td>
+                    <img class="avatar" src="{{reward}}" style="object-fit: cover;"> {{name}}
+                </td>
+                <td>
+                    <div>
+                        {{#each items}}
+                        <img class="item" src="{{this}}" style="object-fit: cover;"> {{/each}}
+                    </div>
+                </td>
+            </tr>
+            {{/each}}
     </table>
 </body>
 
 <script>
     $("#navbar").load("/nav");
+
 </script>
 
 <script>
-    console.log({{json data}});
+    console.log({
+        {
+            json data
+        }
+    });
+
 </script>
+
 </html>

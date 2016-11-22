@@ -29,7 +29,7 @@
                 </div>
             </li>
             <li style="width:290px">
-                <img id="profileImg" src="{{reward}}" style="width: 50; height: 50px; object-fit: cover;">
+                <img id="profileImg" src="{{reward}}" style="width: 50; height: 50px; object-fit: cover; cursor: pointer;" onclick="gotoProfile()">
                 <button class="btnarea dropdown dropbtn" onclick="myFunction()">
                     Welcome, {{name}}
                 </button>
@@ -49,6 +49,7 @@
                 </div>
 
                 <div id="myDropdown" class="dropdown-content">
+                    <a href="/profile" align="center">View Profile</a>
                     <a href="/" align="center">Sign Out</a>
                 </div>
             </li>
@@ -103,6 +104,11 @@
         console.log("setting" + percent);
         document.getElementById("navProgressBar").setAttribute("data-percent", percent);
         $(".progress .bar").progress();
+    }
+    
+    function gotoProfile()
+    {
+        window.location.href = '/profile';
     }
     loadNavProgress();
     setInterval(loadNavProgress, 500);

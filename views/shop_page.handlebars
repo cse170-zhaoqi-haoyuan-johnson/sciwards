@@ -54,7 +54,7 @@
             price = parseInt(price);
             remaining = currGold - price;
             if (remaining < 0) {
-                alert("Sorry, you do not have enough Gold to buy " + name + ". Finish some more tasks!");
+                alert("Sorry, you do not have enough Gold to buy " + name + ". Please finish some more tasks!");
             } else {
                 if (confirm("Buy " + name + " for " + price + " Gold? You will have " + remaining + " Gold left.")) {
                     $.post("/buy", {

@@ -12,7 +12,7 @@
 <body>
     <table class="table table-striped" border="1">
         <tr>
-            <th>Ranking</th>
+            <th style="text-align: right">Ranking</th>
             <th>Name</th>
             <th>Items Owned</th>
         </tr>
@@ -22,7 +22,7 @@
         {{else}}
             <tr>
         {{/ifCond}}
-            <td>{{increment @index}}</td>
+            <td style="text-align: right">{{increment @index}}</td>
             <td>
                 <img class="avatar" src="{{reward}}" style="object-fit: cover;">
                 {{name}}

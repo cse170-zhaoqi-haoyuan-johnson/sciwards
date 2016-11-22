@@ -12,7 +12,7 @@ var home = require('./routes/home');
 var redeem = require('./routes/redeem');
 var login = require('./routes/login');
 var leaderboard = require('./routes/leaderboard');
-
+var profile = require('./routes/profile');
 
 // Example route
 // var user = require('./routes/user');
@@ -98,6 +98,7 @@ app.get('/nav', earn.nav);
 app.get('/home', home.view);
 app.get('/redeem', redeem.view);
 app.get('/leaderboard', leaderboard.view);
+app.get('/profile', profile.view);
 
 app.post('/levelUp', redeem.levelUp);
 app.post('/setGoal', redeem.setGoal);

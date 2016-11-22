@@ -1,0 +1,48 @@
+<html>
+    
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/leaderboard_page.css">
+    <!-- Load Navbar -->
+    <div id="navbar"></div>
+</head>
+
+<body>
+    <table class="table table-striped" border="1">
+        <tr>
+            <th>Ranking</th>
+            <th>Name</th>
+            <th>Items Owned</th>
+        </tr>
+        {{#each data.table}}
+            <p>{{this}}</p>
+        {{/each}}
+        {{#each table}}
+        <tr>
+            <td>{{increment @index}}</td>
+            <td>
+                <img class="avatar" src="{{reward}}">
+                {{name}}
+            </td>
+            <td>
+                <div>
+                    {{#each items}}
+                    <img class="item" src="{{this}}">
+                    {{/each}}
+                </div>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</body>
+
+<script>
+    $("#navbar").load("/nav");
+</script>
+
+<script>
+    console.log({{json data}});
+</script>
+</html>

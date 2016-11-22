@@ -75,12 +75,17 @@
         if (tempTime < REQUIRED_USAGE_TIME) {
             window.alert("You have not spent enough time on the task. Please complete the task.");
         } else {
-            window.alert("Congrats! You got " + Math.ceil(Math.sqrt(tempTime / 1000)) + " exp!");
             var str = $("#pointText").text();
             console.log(str);
             var points = parseInt(str);
             console.log(points);
             points += Math.ceil(Math.sqrt(tempTime / 1000));
+            var currentLevel = parseInt($("#currentLevelText").text());
+            var currGold = parseInt($("#currentGoldText").text());
+            var gold = currentLevel * Math.ceil(Math.sqrt(tempTime / 1000));
+            currGold += gold; 
+            window.alert("Congrats! You got " + Math.ceil(Math.sqrt(tempTime / 1000)) + " exp and " + currentLevel * Math.ceil(Math.sqrt(tempTime / 1000)) + " Gold!");
+            console.log("GOLD: " + gold + '\n');
             console.log(nextLevelExp);
             // level up!
             if (points >= nextLevelExp) {
@@ -102,9 +107,11 @@
                 window.alert("Wooo! You leveled up to Level " + $("#currentLevelText").text() + ". Check out your new Avatars!");
             } else {
                 $("#pointText").text(points);
+                $("#currentGoldText").text(currGold);
                 console.log("points " + points);
                 $.post("/point", {
-                    point: points
+                    point: points,
+                    gold: gold
                 });
             }
             //location.reload(true);

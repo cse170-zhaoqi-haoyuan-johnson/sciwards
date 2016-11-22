@@ -20,7 +20,10 @@ exports.post = function (req, res, next) {
                             score: 0,
                             level: 1,
                             reward: "/Images/Avatars/avatar_1.png",
-                            nextLevelExp: 15
+                            nextLevelExp: 15,
+                            netWorth: 0,
+                            gold: 0,
+                            items:[]
                         });
                         var json = JSON.stringify(obj);
                         fs.writeFileSync('data/data.json', json);

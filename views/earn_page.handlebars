@@ -157,8 +157,10 @@
             $("#selectProjectPrompt").attr("visible", "true");
             console.log("empty");
         }
-        ga('send', 'event', 'changeProjectOG', 'click');
-
+        if (sessionStorage.send == null) {
+            ga('send', 'event', 'changeProjectOG', 'click');
+            sessionStorage.send = true;
+        }
         closeNav();
     }
     var numClicks;

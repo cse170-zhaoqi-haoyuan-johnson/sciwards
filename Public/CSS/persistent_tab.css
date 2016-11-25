@@ -17,7 +17,7 @@ body {
     margin: auto;
 }
 #nav-wrapper {
-    padding-left: 0px;
+    padding-left: 75px;
     width: 1200px;
     height: 92px;
     margin: auto;
@@ -32,7 +32,7 @@ body {
 #nav ul li {
     display: table-cell;
     text-align: center;
-    width: 155px;
+    width: 130px;
     /*height: 100%;*/
 }
 #nav ul button {

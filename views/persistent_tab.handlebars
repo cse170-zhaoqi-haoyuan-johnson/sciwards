@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/CSS/persistent_tab.css">
 <div id="nav">
+    <img src="/Images/logo2.png" id="logo">
     <div id="nav-wrapper">
         <ul>
             <li><a class="navbtn" href="/home" border="none">Home</a></li>
@@ -28,14 +29,14 @@
                     <a href="/redeem" align="center">Redeem</a>
                 </div>
             </li>
-            <li style="width: 300px; margin-left: 15px;">
-                <button class="btnarea dropdown dropbtn" onclick="myFunction()" style="width: 250px; height: 50px;">
+            <li style="width: 260px; margin-left: 15px;">
+                <button class="btnarea dropdown dropbtn" onclick="myFunction()" style="width: 210px; height: 50px; position: relative;">
                     Welcome, {{name}}
                 </button>
-                <img id="profileImg" src="{{reward}}" style="width: 50px; height: 50px; cursor: pointer; float: left;" onclick="gotoProfile()">
+                <img id="profileImg" src="{{reward}}" style="width: 50px; height: 50px; cursor: pointer; position: relative; float: left;" onclick="gotoProfile()">
                 
                 <div style="background-color:#656565; color:#FFF; padding-top:5px; height: 40px;">
-                    <p style="display: inline-block; vertical-align:middle; clear: both;">
+                    <p style="display: inline-block; vertical-align:middle; position: relative; clear: both;">
                         Level
                     </p>
                     <p style="display: inline-block; vertical-align:middle;" id="currentLevelText" onclick="redeemFunction()">
@@ -54,7 +55,11 @@
                     <a href="/" align="center">Sign Out</a>
                 </div>
             </li>
-
+            <!--
+            <li>
+                <img src="/Images/logo.png" style="height: 90px; width: 90px; clear: both;">
+            </li>
+            -->
         </ul>
     </div>
 </div>

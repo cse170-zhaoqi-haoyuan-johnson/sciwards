@@ -28,13 +28,14 @@
                     <a href="/redeem" align="center">Redeem</a>
                 </div>
             </li>
-            <li style="width:290px">
-                <img id="profileImg" src="{{reward}}" style="width: 50; height: 50px; object-fit: cover; cursor: pointer;" onclick="gotoProfile()">
-                <button class="btnarea dropdown dropbtn" onclick="myFunction()">
+            <li style="width: 300px; margin-left: 15px;">
+                <button class="btnarea dropdown dropbtn" onclick="myFunction()" style="width: 250px; height: 50px;">
                     Welcome, {{name}}
                 </button>
-                <div style="background-color:#9370DB; color:#FFF; padding-top:5px;">
-                    <p style="display: inline-block; vertical-align:middle;">
+                <img id="profileImg" src="{{reward}}" style="width: 50px; height: 50px; cursor: pointer; float: left;" onclick="gotoProfile()">
+                
+                <div style="background-color:#656565; color:#FFF; padding-top:5px; height: 40px;">
+                    <p style="display: inline-block; vertical-align:middle; clear: both;">
                         Level
                     </p>
                     <p style="display: inline-block; vertical-align:middle;" id="currentLevelText" onclick="redeemFunction()">

@@ -4,9 +4,10 @@ body {
     align-content: center;
 }
 .profile {
+    width: 100%;
     min-height: 300px;
     display: inline-block;
-    align-content: center;
+    /*align-content: center;*/
 }
 figcaption.ratings {
     margin-top: 20px;

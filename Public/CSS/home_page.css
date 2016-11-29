@@ -147,30 +147,3 @@ ul.projects.columns-3 li {
     left: 25%;
     text-align: center;
 }
-.transition (@animation: ease-in, @time: 1s) {
-    transition: width @animation @time;
-    -webkit-transition: width @animation @time;
-    -moz-transition: width @animation @time;
-    -o-transition: width @animation @time;
-}
-.bar-con {
-    background-color: #ccc;
-    height: 0.75em;
-    margin-bottom: 1em;
-}
-.bar {
-    float: left;
-    height: 100%;
-    width: 0%;
-    border-radius: 5px
-}
-.progress .bar {
-    background-color: #03AB70;
-    transition: width ease-in 1s;
-    -webkit-transition: width ease-in-out 2s;
-    -moz-transition: width ease-in-out 2s;
-    -o-transition: width ease-in-out 2s;
-}
-.progress {
-    border-radius: 5px;
-}

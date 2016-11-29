@@ -1,5 +1,15 @@
 .container {
 }
+
+.about-text {
+    line-height: 1.6;
+    font-size: 18px;
+    font-weight: 500;
+    color: #444;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 #project-title {  
 }
 ul.projects {

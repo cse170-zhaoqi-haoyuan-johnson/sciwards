@@ -1,46 +1,6 @@
 <html>
 
 <head>
-    <!-- Google Analytics Content Experiment code -->
-    <script>
-        function utmx_section() {}
-
-        function utmx() {}(function() {
-            var
-                k = '134462303-2',
-                d = document,
-                l = d.location,
-                c = d.cookie;
-            if (l.search.indexOf('utm_expid=' + k) > 0) return;
-
-            function f(n) {
-                if (c) {
-                    var i = c.indexOf(n + '=');
-                    if (i > -1) {
-                        var j = c.
-                        indexOf(';', i);
-                        return escape(c.substring(i + n.length + 1, j < 0 ? c.length : j))
-                    }
-                }
-            }
-            var x = f('__utmx'),
-                xx = f('__utmxx'),
-                h = l.hash;
-            d.write(
-                '<sc' + 'ript src="' + 'http' + (l.protocol == 'https:' ? 's://ssl' :
-                    '://www') + '.google-analytics.com/ga_exp.js?' + 'utmxkey=' + k +
-                '&utmx=' + (x ? x : '') + '&utmxx=' + (xx ? xx : '') + '&utmxtime=' + new Date().valueOf() + (h ? '&utmxhash=' + escape(h.substr(1)) : '') +
-                '" type="text/javascript" charset="utf-8"><\/sc' + 'ript>')
-        })();
-
-    </script>
-    <script>
-        utmx('url', 'A/B');
-
-    </script>
-    <!-- End of Google Analytics Content Experiment code -->
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/CSS/earn_page.css">
     <div id="navbar"></div>
@@ -48,8 +8,8 @@
     <script src="/Javascript/earn_page.js"></script>
 </head>
 <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="javascript:void(0)" onclick="openProjectURL('EyeWire')">EyeWire</a>
+
+    <h2 id="projectLabel"><u><b>Projects</b></u></h2>
     <a href="javascript:void(0)" onclick="openProjectURL('eterna')">eterna</a>
     <a href="javascript:void(0)" onclick="openProjectURL('PHYLO')">PHYLO</a>
     <a href="javascript:void(0)" onclick="openProjectURL('nightjar')">nightjar</a>
@@ -58,15 +18,16 @@
 <body height=100%>
     <div id="main">
         <!-- Use any element to open the sidenav -->
-        <button id="selectProjectButton" class="btn btn-info" onclick="openNav()">Select Project</button>
+        <!--  <button id="selectProjectButton" class="btn btn-info" onclick="openNav()">Select Project</button> -->
         <button id="finishedButton" class="btn btn-info" onclick="taskFinished()">Finished My Task!</button>
+
         <a id="right" href="#openModal" class="btn btn-info" role="button">Help</a>
 
         <div id="openModal" class="modalDialog">
             <div>
                 <a href="#close" title="Close" class="close">X</a>
                 <h2>Help</h2>
-                <p>Select a project by clicking the button to the left. When you have completed the task, press the "Finished My Task" button to be rewarded your points.</p>
+                <p>Select a project on the left. When you have completed the task, press the "Finished My Task" button to be rewarded your points.</p>
                 <p></p>
             </div>
         </div>
@@ -102,6 +63,10 @@
     var tempTime = 0;
     var interval_js_id;
     $("#navbar").load("/nav");
+    document.getElementById("mySidenav").style.width = "157px";
+    document.getElementById("projectLabel").style.marginLeft = "10px";
+    document.getElementById("main").style.marginLeft = "150px";
+    //document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 
     function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
@@ -162,6 +127,14 @@
                 currentLevel++;
                 $("#currentLevelText").text(currentLevel);
                 window.alert("Wooo! You leveled up to Level " + $("#currentLevelText").text() + ". Check out your new Avatars!");
+                
+                $("#pointText").text(points);
+                $("#currentGoldText").text(currGold);
+                console.log("points " + points);
+                $.post("/point", {
+                    point: 0,
+                    gold: gold
+                });
             } else {
                 $("#pointText").text(points);
                 $("#currentGoldText").text(currGold);
@@ -177,11 +150,7 @@
     }
 
     function openProject(projectName) {
-        if (projectName == "EyeWire") {
-            $("#projectFrame").attr("src", "http://eyewire.org/");
-            $("#selectProjectPrompt").attr("visible", "false");
-
-        } else if (projectName == "eterna") {
+        if (projectName == "eterna") {
             $("#projectFrame").attr("src", "http://www.eternagame.org/web/");
             $("#selectProjectPrompt").attr("visible", "false");
         } else if (projectName == "PHYLO") {
@@ -201,7 +170,10 @@
             ga('send', 'event', 'changeProject', 'click');
             sessionStorage.send = true;
         }
-        closeNav();
+
+
+
+        // closeNav();
     }
     var numClicks;
 
@@ -211,11 +183,11 @@
         window.location.href = '/earn/' + projectName;
     }
 
-
-    /*window.onscroll = function() {
+    /*
+    window.onscroll = function() {
         window.scrollTo(0, 0);
-    }*/
-
+    }
+    */
     $("#projectFrame").attr("height", $(window).innerHeight() * 0.8);
     openProject($("#projectFrame").attr("name"));
     console.log("it's loaded!!!!!");

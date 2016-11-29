@@ -25,41 +25,14 @@ exports.view = function (req, res) {
     });
 
 };
-exports.view2 = function (req, res) {
-    var projectName = req.params.projectName;
-    console.log("Project is " + projectName);
-    fs.readFile('data/data.json', function readFileCallback(err, data) {
-        if (err) {
-            console.log(err);
-        } else {
-            var profile;
-            var obj = JSON.parse(data);
-            for (var i = 0; i < obj.table.length; i++) {
-                if (req.session.name == obj.table[i].name) {
-                    profile = obj.table[i];
-                }
-            }
-            res.render('earn_page2', {
-                'projectName': projectName,
-                'userData': profile
-            });
-        }
 
-    });
-
-};
 exports.viewEmpty = function (req, res) {
     console.log("Project is emtpy");
     res.render('earn_page', {
         'projectName': ''
     });
 };
-exports.viewEmpty2 = function (req, res) {
-    console.log("Project is emtpy");
-    res.render('earn_page2', {
-        'projectName': ''
-    });
-};
+
 exports.nav = function (req, res) {
     fs.readFile('data/data.json', function readFileCallback(err, data) {
         if (err) {

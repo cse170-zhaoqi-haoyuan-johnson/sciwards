@@ -2,11 +2,6 @@
 
      "projects": [
          {
-             "name": "Eyewire",
-             "image": "/Images/ProjectImages/eyewire1.jpg",
-             "link": "/earn/EyeWire"
-        },
-         {
              "name": "Eterna",
              "image": "/Images/ProjectImages/eterna.jpg",
              "link": "/earn/eterna"
